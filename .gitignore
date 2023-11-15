@@ -1,0 +1,34 @@
+# Dependencies
+/node_modules
+
+# Production
+/build
+
+# Generated files
+.docusaurus
+.cache-loader
+
+scripts/graphql/dist
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+/docs/sidebar-schema.js
+/docs/generated.md
+/docs/unions/
+/docs/scalars/
+/docs/queries/
+/docs/objects/
+/docs/mutations/
+/docs/interfaces/
+/docs/inputs/
+/docs/enums/
+/docs/directives/
