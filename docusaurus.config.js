@@ -21,8 +21,7 @@ module.exports = {
       contextualSearch: true,
       searchParameters: {},
       searchPagePath: "search",
-      externalUrlRegex:
-        "api-reference\\.swan\\.io|docs\\.swan\\.io|incomparable-tiramisu-91a96a\\.netlify\\.app|swan-io\\.github\\.io",
+      externalUrlRegex: "docs\\.swan\\.io",
     },
     navbar: {
       title: "API reference",
