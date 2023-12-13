@@ -30,6 +30,13 @@ module.exports = {
         src: "img/logo-swan.svg",
         width: 70,
       },
+      items: [
+        {
+          to: "https://beta.docs.swan.io",
+          label: "Documentation",
+          position: "left",
+        },
+      ],
     },
     // footer: {
     //   // style: "dark",
