@@ -24,7 +24,6 @@ module.exports = {
       externalUrlRegex: "docs\\.swan\\.io",
     },
     navbar: {
-      title: "API reference",
       logo: {
         alt: "Swan",
         src: "img/logo-swan.svg",
@@ -35,6 +34,19 @@ module.exports = {
           to: "https://beta.docs.swan.io",
           label: "Documentation",
           position: "left",
+          target: "_self",
+        },
+        {
+          to: "https://beta.docs.swan.io/developers",
+          label: "Developers",
+          position: "left",
+          target: "_self",
+        },
+        {
+          label: "API Reference",
+          position: "left",
+          docId: "index",
+          to: "/",
         },
       ],
     },
