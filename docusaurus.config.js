@@ -48,6 +48,11 @@ module.exports = {
           docId: "index",
           to: "/",
         },
+        {
+          position: "right",
+          href: "https://docs.swan.io/help/changelog",
+          label: "Changelog",
+        },
       ],
     },
     // footer: {
