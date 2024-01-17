@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.1.0">
 <title data-rh="true">Account | Swan Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://api-reference.swan.io/objects/account"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Account | Swan Docs"><meta data-rh="true" name="description" content="Whether you call it a wallet, monetary account, payment account or bank account, the notion of account is fundamental at Swan. All payment flows necessarily go through an account."><meta data-rh="true" property="og:description" content="Whether you call it a wallet, monetary account, payment account or bank account, the notion of account is fundamental at Swan. All payment flows necessarily go through an account."><link data-rh="true" rel="icon" href="/img/favicon.png"><link data-rh="true" rel="canonical" href="https://api-reference.swan.io/objects/account"><link data-rh="true" rel="alternate" href="https://api-reference.swan.io/objects/account" hreflang="en"><link data-rh="true" rel="alternate" href="https://api-reference.swan.io/objects/account" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://PWGO6EETLK-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Swan Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.fbd8caa8.css">
-<script src="/assets/js/runtime~main.256e96d8.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.366e511a.js" defer="defer"></script>
 <script src="/assets/js/main.11d726e3.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -177,12 +177,13 @@ The list is ordered by lastUpdateAt</p>
 <blockquote>
 <p>A list of invoices of an account.
 The list is ordered by creation date (from newest to oldest)</p>
+<p>Implements the Relay Connection interface, used to paginate list of element (<a href="https://docs.swan.io/api/pagination" target="_blank" rel="noopener noreferrer">Learn More</a>)</p>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="accountinvoicesfirstint--"><a href="#"><code style="font-weight:normal">Account.invoices.<b>first</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/int"><code>Int!</code></a> <span class="badge badge--secondary">non-null</span> <span class="badge badge--secondary">scalar</span><a href="#accountinvoicesfirstint--" class="hash-link" aria-label="Direct link to accountinvoicesfirstint--" title="Direct link to accountinvoicesfirstint--">​</a></h5>
-<p>number of elements in the list (default value 10)</p>
+<p>the number of elements to load (maximum: 100)</p>
 </blockquote>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="accountinvoicesafterstring-"><a href="#"><code style="font-weight:normal">Account.invoices.<b>after</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#accountinvoicesafterstring-" class="hash-link" aria-label="Direct link to accountinvoicesafterstring-" title="Direct link to accountinvoicesafterstring-">​</a></h5>
 <blockquote>
-<p>When the list of elements needs to start after an element</p>
+<p>the index (a unique reference in string form) from which you will load the following elements</p>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="accountreceiveddirectdebitmandatesreceiveddirectdebitmandateconnection-"><a href="#"><code style="font-weight:normal">Account.<b>receivedDirectDebitMandates</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/objects/received-direct-debit-mandate-connection"><code>ReceivedDirectDebitMandateConnection</code></a> <span class="badge badge--secondary">object</span><a href="#accountreceiveddirectdebitmandatesreceiveddirectdebitmandateconnection-" class="hash-link" aria-label="Direct link to accountreceiveddirectdebitmandatesreceiveddirectdebitmandateconnection-" title="Direct link to accountreceiveddirectdebitmandatesreceiveddirectdebitmandateconnection-">​</a></h4>
 <blockquote>
