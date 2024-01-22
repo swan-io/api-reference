@@ -36,6 +36,12 @@ module.exports = {
           target: "_self",
         },
         {
+          to: "https://beta.docs.swan.io/partnership/",
+          label: "Partnership",
+          position: "left",
+          target: "_self",
+        },
+        {
           to: "https://beta.docs.swan.io/developers",
           label: "Developers",
           position: "left",
