@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.1.0">
 <title data-rh="true">AccountMembership | Swan Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://api-reference.swan.io/objects/account-membership"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="AccountMembership | Swan Docs"><meta data-rh="true" name="description" content="An account membership represents the rights of a user for a given account."><meta data-rh="true" property="og:description" content="An account membership represents the rights of a user for a given account."><link data-rh="true" rel="icon" href="/img/favicon.png"><link data-rh="true" rel="canonical" href="https://api-reference.swan.io/objects/account-membership"><link data-rh="true" rel="alternate" href="https://api-reference.swan.io/objects/account-membership" hreflang="en"><link data-rh="true" rel="alternate" href="https://api-reference.swan.io/objects/account-membership" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://PWGO6EETLK-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Swan Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.fbd8caa8.css">
-<script src="/assets/js/runtime~main.969d96a2.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.b56f133c.js" defer="defer"></script>
 <script src="/assets/js/main.150818ea.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -99,21 +99,25 @@
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="accountmembershipcardscardconnection--"><a href="#"><code style="font-weight:normal">AccountMembership.<b>cards</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/objects/card-connection"><code>CardConnection!</code></a> <span class="badge badge--secondary">non-null</span> <span class="badge badge--secondary">object</span><a href="#accountmembershipcardscardconnection--" class="hash-link" aria-label="Direct link to accountmembershipcardscardconnection--" title="Direct link to accountmembershipcardscardconnection--">​</a></h4>
 <blockquote>
 <p>account membership&#x27;s cards</p>
+<p>Implements the Relay Connection interface, used to paginate list of element (<a href="https://docs.swan.io/api/pagination" target="_blank" rel="noopener noreferrer">Learn More</a>)</p>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="accountmembershipcardsfirstint--"><a href="#"><code style="font-weight:normal">AccountMembership.cards.<b>first</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/int"><code>Int!</code></a> <span class="badge badge--secondary">non-null</span> <span class="badge badge--secondary">scalar</span><a href="#accountmembershipcardsfirstint--" class="hash-link" aria-label="Direct link to accountmembershipcardsfirstint--" title="Direct link to accountmembershipcardsfirstint--">​</a></h5>
+<p>the number of elements to load (maximum: 100)</p>
 </blockquote>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="accountmembershipcardsbeforestring-"><a href="#"><code style="font-weight:normal">AccountMembership.cards.<b>before</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#accountmembershipcardsbeforestring-" class="hash-link" aria-label="Direct link to accountmembershipcardsbeforestring-" title="Direct link to accountmembershipcardsbeforestring-">​</a></h5>
 <blockquote>
+<p>the index (a unique reference in string form) from which you will load the preceding elements</p>
 </blockquote>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="accountmembershipcardsafterstring-"><a href="#"><code style="font-weight:normal">AccountMembership.cards.<b>after</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#accountmembershipcardsafterstring-" class="hash-link" aria-label="Direct link to accountmembershipcardsafterstring-" title="Direct link to accountmembershipcardsafterstring-">​</a></h5>
 <blockquote>
+<p>the index (a unique reference in string form) from which you will load the following elements</p>
 </blockquote>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="accountmembershipcardsorderbycardorderbyinput-"><a href="#"><code style="font-weight:normal">AccountMembership.cards.<b>orderBy</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/inputs/card-order-by-input"><code>CardOrderByInput</code></a> <span class="badge badge--secondary">input</span><a href="#accountmembershipcardsorderbycardorderbyinput-" class="hash-link" aria-label="Direct link to accountmembershipcardsorderbycardorderbyinput-" title="Direct link to accountmembershipcardsorderbycardorderbyinput-">​</a></h5>
 <blockquote>
-<p>When the list of elements needs to be ordered</p>
+<p>an order you can apply to your list of connections</p>
 </blockquote>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="accountmembershipcardsfilterscardfiltersinput-"><a href="#"><code style="font-weight:normal">AccountMembership.cards.<b>filters</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/inputs/card-filters-input"><code>CardFiltersInput</code></a> <span class="badge badge--secondary">input</span><a href="#accountmembershipcardsfilterscardfiltersinput-" class="hash-link" aria-label="Direct link to accountmembershipcardsfilterscardfiltersinput-" title="Direct link to accountmembershipcardsfilterscardfiltersinput-">​</a></h5>
 <blockquote>
-<p>When the list of elements needs to be filtered</p>
+<p>a filtering table you can apply to your list of connections</p>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="accountmembershipspendingspending-"><a href="#"><code style="font-weight:normal">AccountMembership.<b>spending</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/objects/spending"><code>Spending</code></a> <span class="badge badge--secondary">object</span><a href="#accountmembershipspendingspending-" class="hash-link" aria-label="Direct link to accountmembershipspendingspending-" title="Direct link to accountmembershipspendingspending-">​</a></h4>
 <blockquote>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.1.0">
 <title data-rh="true">Card | Swan Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://api-reference.swan.io/objects/card"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Card | Swan Docs"><meta data-rh="true" name="description" content="Card"><meta data-rh="true" property="og:description" content="Card"><link data-rh="true" rel="icon" href="/img/favicon.png"><link data-rh="true" rel="canonical" href="https://api-reference.swan.io/objects/card"><link data-rh="true" rel="alternate" href="https://api-reference.swan.io/objects/card" hreflang="en"><link data-rh="true" rel="alternate" href="https://api-reference.swan.io/objects/card" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://PWGO6EETLK-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Swan Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.fbd8caa8.css">
-<script src="/assets/js/runtime~main.969d96a2.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.b56f133c.js" defer="defer"></script>
 <script src="/assets/js/main.150818ea.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -98,18 +98,21 @@
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="carddigitalcardsdigitalcardconnection--"><a href="#"><code style="font-weight:normal">Card.<b>digitalCards</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/objects/digital-card-connection"><code>DigitalCardConnection!</code></a> <span class="badge badge--secondary">non-null</span> <span class="badge badge--secondary">object</span><a href="#carddigitalcardsdigitalcardconnection--" class="hash-link" aria-label="Direct link to carddigitalcardsdigitalcardconnection--" title="Direct link to carddigitalcardsdigitalcardconnection--">​</a></h4>
 <blockquote>
 <p>Digital Cards linked to this card</p>
+<p>Implements the Relay Connection interface, used to paginate list of element (<a href="https://docs.swan.io/api/pagination" target="_blank" rel="noopener noreferrer">Learn More</a>)</p>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="carddigitalcardsfirstint--"><a href="#"><code style="font-weight:normal">Card.digitalCards.<b>first</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/int"><code>Int!</code></a> <span class="badge badge--secondary">non-null</span> <span class="badge badge--secondary">scalar</span><a href="#carddigitalcardsfirstint--" class="hash-link" aria-label="Direct link to carddigitalcardsfirstint--" title="Direct link to carddigitalcardsfirstint--">​</a></h5>
+<p>the number of elements to load (maximum: 100)</p>
 </blockquote>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="carddigitalcardsafterstring-"><a href="#"><code style="font-weight:normal">Card.digitalCards.<b>after</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#carddigitalcardsafterstring-" class="hash-link" aria-label="Direct link to carddigitalcardsafterstring-" title="Direct link to carddigitalcardsafterstring-">​</a></h5>
 <blockquote>
+<p>the index (a unique reference in string form) from which you will load the following elements</p>
 </blockquote>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="carddigitalcardsorderbydigitalcardorderbyinput-"><a href="#"><code style="font-weight:normal">Card.digitalCards.<b>orderBy</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/inputs/digital-card-order-by-input"><code>DigitalCardOrderByInput</code></a> <span class="badge badge--secondary">input</span><a href="#carddigitalcardsorderbydigitalcardorderbyinput-" class="hash-link" aria-label="Direct link to carddigitalcardsorderbydigitalcardorderbyinput-" title="Direct link to carddigitalcardsorderbydigitalcardorderbyinput-">​</a></h5>
 <blockquote>
-<p>When the list of elements needs to be ordered</p>
+<p>an order you can apply to your list of connections</p>
 </blockquote>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="carddigitalcardsfiltersdigitalcardfiltersinput-"><a href="#"><code style="font-weight:normal">Card.digitalCards.<b>filters</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/inputs/digital-card-filters-input"><code>DigitalCardFiltersInput</code></a> <span class="badge badge--secondary">input</span><a href="#carddigitalcardsfiltersdigitalcardfiltersinput-" class="hash-link" aria-label="Direct link to carddigitalcardsfiltersdigitalcardfiltersinput-" title="Direct link to carddigitalcardsfiltersdigitalcardfiltersinput-">​</a></h5>
 <blockquote>
-<p>When the list of elements needs to be filtered</p>
+<p>a filtering table you can apply to your list of connections</p>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="cardtransactionstransactionconnection-"><a href="#"><code style="font-weight:normal">Card.<b>transactions</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/objects/transaction-connection"><code>TransactionConnection</code></a> <span class="badge badge--secondary">object</span><a href="#cardtransactionstransactionconnection-" class="hash-link" aria-label="Direct link to cardtransactionstransactionconnection-" title="Direct link to cardtransactionstransactionconnection-">​</a></h4>
 <blockquote>
