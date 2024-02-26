@@ -26,7 +26,7 @@ module.exports = {
       logo: {
         alt: "Swan",
         src: "img/logo-swan.svg",
-        width: 70,
+        width: 115,
       },
       items: [
         {
