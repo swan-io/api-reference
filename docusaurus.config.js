@@ -1,12 +1,13 @@
 const prism = require("prism-react-renderer");
 const path = require("path");
 
+const url = "https://api-reference.swan.io";
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "Swan Docs",
   tagline:
     "Discover the features that power Swan. Unlock your integration’s full potential with Swan’s comprehensive documentation.",
-  url: "https://api-reference.swan.io",
+  url,
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
