@@ -4,7 +4,8 @@ const path = require("path");
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "Swan Docs",
-  tagline: "Onboarding & Banking clients for Swan",
+  tagline:
+    "Discover the features that power Swan. Unlock your integration’s full potential with Swan’s comprehensive documentation.",
   url: "https://api-reference.swan.io",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -55,6 +56,11 @@ module.exports = {
         },
         {
           position: "right",
+          href: "https://explorer.swan.io/",
+          label: "API Explorer",
+        },
+        {
+          position: "right",
           href: "https://docs.swan.io/help/changelog",
           label: "Changelog",
         },
@@ -68,6 +74,13 @@ module.exports = {
       theme: prism.themes.palenight,
       darkTheme: prism.themes.oceanicNext,
     },
+    metadata: [
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: `${url}/img/share.jpg` },
+      { property: "og:image:width", content: `1500` },
+      { property: "og:image:height", content: `777` },
+      { name: "twitter:image", content: `${url}/img/share.jpg` },
+    ],
   },
   markdown: {
     mermaid: true,
