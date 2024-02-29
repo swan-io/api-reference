@@ -62,7 +62,7 @@ module.exports = {
         },
         {
           position: "right",
-          href: "https://docs.swan.io/help/changelog",
+          href: "https://docs.swan.io/changelog",
           label: "Changelog",
         },
       ],
