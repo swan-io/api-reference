@@ -28,7 +28,9 @@ module.exports = {
       logo: {
         alt: "Swan",
         src: "img/logo-swan.svg",
-        width: 115,
+        width: 130,
+        href: "https://docs.swan.io",
+        target: "_self",
       },
       items: [
         {
