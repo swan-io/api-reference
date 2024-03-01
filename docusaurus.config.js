@@ -2,6 +2,7 @@ const prism = require("prism-react-renderer");
 const path = require("path");
 
 const url = "https://api-reference.swan.io";
+
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: "Swan Docs",
