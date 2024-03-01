@@ -32,19 +32,19 @@ module.exports = {
       },
       items: [
         {
-          to: "https://beta.docs.swan.io",
+          to: "https://docs.swan.io",
           label: "Documentation",
           position: "left",
           target: "_self",
         },
         {
-          to: "https://beta.docs.swan.io/partnership/",
+          to: "https://docs.swan.io/partnership/",
           label: "Partnership",
           position: "left",
           target: "_self",
         },
         {
-          to: "https://beta.docs.swan.io/developers",
+          to: "https://docs.swan.io/developers",
           label: "Developers",
           position: "left",
           target: "_self",
@@ -64,6 +64,7 @@ module.exports = {
           position: "right",
           href: "https://docs.swan.io/changelog",
           label: "Changelog",
+          target: "_self",
         },
       ],
     },

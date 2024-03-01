@@ -242,3 +242,8 @@ pre {
     font-size: 13px;
   }
 }
+
+.navbar__link[href="https://docs.swan.io/changelog"] svg
+{
+  display: none;
+}
