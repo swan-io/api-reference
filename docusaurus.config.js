@@ -32,7 +32,7 @@ module.exports = {
       },
       items: [
         {
-          to: "https://docs.swan.io",
+          to: "https://docs.swan.io/welcome",
           label: "Documentation",
           position: "left",
           target: "_self",
