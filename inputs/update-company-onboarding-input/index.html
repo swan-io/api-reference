@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.1.0">
 <title data-rh="true">UpdateCompanyOnboardingInput | Swan Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" property="og:url" content="https://api-reference.swan.io/inputs/update-company-onboarding-input"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://api-reference.swan.io/img/share.jpg"><meta data-rh="true" property="og:image:width" content="1500"><meta data-rh="true" property="og:image:height" content="777"><meta data-rh="true" name="twitter:image" content="https://api-reference.swan.io/img/share.jpg"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="UpdateCompanyOnboardingInput | Swan Docs"><meta data-rh="true" name="description" content="No description"><meta data-rh="true" property="og:description" content="No description"><link data-rh="true" rel="icon" href="/img/favicon.png"><link data-rh="true" rel="canonical" href="https://api-reference.swan.io/inputs/update-company-onboarding-input"><link data-rh="true" rel="alternate" href="https://api-reference.swan.io/inputs/update-company-onboarding-input" hreflang="en"><link data-rh="true" rel="alternate" href="https://api-reference.swan.io/inputs/update-company-onboarding-input" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://PWGO6EETLK-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="Swan Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.df7ad410.css">
-<script src="/assets/js/runtime~main.345595db.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.ff85ba00.js" defer="defer"></script>
 <script src="/assets/js/main.b5fb5cdc.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -13,35 +13,48 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="fields">Fields<a href="#fields" class="hash-link" aria-label="Direct link to Fields" title="Direct link to Fields">​</a></h3>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputaccountnamestring-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>accountName</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#updatecompanyonboardinginputaccountnamestring-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputaccountnamestring-" title="Direct link to updatecompanyonboardinginputaccountnamestring-">​</a></h4>
 <blockquote>
-<p>Account name of the company account holder. Length must be from 0 to 100 characters</p>
+<p>Account name of the company account holder.</p>
+<ul>
+<li>Length must be from 0 to 100 characters</li>
+</ul>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputaccountcountryaccountcountry-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>accountCountry</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/enums/account-country"><code>AccountCountry</code></a> <span class="badge badge--secondary">enum</span><a href="#updatecompanyonboardinginputaccountcountryaccountcountry-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputaccountcountryaccountcountry-" title="Direct link to updatecompanyonboardinginputaccountcountryaccountcountry-">​</a></h4>
 <blockquote>
-<p>Country of the account that will be created at the end of the onboarding process</p>
+<p>Country of the account created at the end of onboarding.</p>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputnamestring-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>name</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#updatecompanyonboardinginputnamestring-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputnamestring-" title="Direct link to updatecompanyonboardinginputnamestring-">​</a></h4>
 <blockquote>
-<p>Name of the company. Length must be from 0 to 255 characters</p>
+<p>Company name.</p>
+<ul>
+<li>Length must be from 0 to 100 characters.</li>
+<li>Valid format (regex): /^(?:(?&lt;!http(s)<em>://|<a href="http://www.%7C%3C%7C%3E)%5B!-./-;A-Z%5B-%60a-z%C3%80-%C3%96%C3%99-%C3%B6%C2%BA-%C6%BF%C7%84-%CA%AF%CA%B9-%CA%BD%CE%88-%CE%8A%CE%8E-%CE%A1%CE%A3-%D2%81%D2%8A-%D5%96%D5%A1-%D6%87%E1%82%A0-%E1%83%85%E1%83%90-%E1%83%BA%E1%84%80-%E1%8D%9C%E1%8D%A9-%E1%8E%8F%E1%B5%AB-%E1%B6%9A%E1%B8%80-%E1%BF%BE%E2%B4%80-%E2%B4%A5%E2%BA%80-%E2%BF%95%E3%81%81-%E3%82%96%E3%82%9D-%E3%87%BF%E3%8B%BF-%E9%BF%AF%E9%BF%BF-%EA%92%8C%EA%99%80-%EA%99%AE%EA%9A%80-%EA%9A%99%EA%9C%A6-%EA%9E%87%EA%9E%8D-%EA%9E%BF%EA%A5%A0-%EA%A5%BC%EF%BC%A1-%EF%BC%BA%EF%BD%81-%EF%BD%9A/%5D%7C%C2%BF%7C%C2%A1%7C" target="_blank" rel="noopener noreferrer">www.|&lt;|&gt;)[!-./-;A-Z[-`a-zÀ-ÖÙ-öº-ƿǄ-ʯʹ-ʽΈ-ΊΎ-ΡΣ-ҁҊ-Ֆա-ևႠ-Ⴥა-ჺᄀ-፜፩-ᎏᵫ-ᶚḀ-῾ⴀ-ⴥ⺀-⿕ぁ-ゖゝ-ㇿ㋿-鿯鿿-ꒌꙀ-ꙮꚀ-ꚙꜦ-ꞇꞍ-ꞿꥠ-ꥼＡ-Ｚａ-ｚ/]|¿|¡|</a> |&#x27;|-|Ά|Ό|=|?|@|[|]|||‘|’)</em>$/</li>
+</ul>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputregistrationnumberstring-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>registrationNumber</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#updatecompanyonboardinginputregistrationnumberstring-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputregistrationnumberstring-" title="Direct link to updatecompanyonboardinginputregistrationnumberstring-">​</a></h4>
 <blockquote>
-<p>Registration number of the company (SIRET, ...). Length must be from 0 to 50 characters</p>
+<p>Registration number of the company (SIRET, ...).</p>
+<ul>
+<li>Length must be from 0 to 50 characters.</li>
+</ul>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputcompanytypecompanytype-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>companyType</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/enums/company-type"><code>CompanyType</code></a> <span class="badge badge--secondary">enum</span><a href="#updatecompanyonboardinginputcompanytypecompanytype-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputcompanytypecompanytype-" title="Direct link to updatecompanyonboardinginputcompanytypecompanytype-">​</a></h4>
 <blockquote>
-<p>Type of the company (Association ...)</p>
+<p>Type of the company (Association ...).</p>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputbusinessactivitybusinessactivity-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>businessActivity</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/enums/business-activity"><code>BusinessActivity</code></a> <span class="badge badge--secondary">enum</span><a href="#updatecompanyonboardinginputbusinessactivitybusinessactivity-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputbusinessactivitybusinessactivity-" title="Direct link to updatecompanyonboardinginputbusinessactivitybusinessactivity-">​</a></h4>
 <blockquote>
-<p>Business activity</p>
+<p>Business activity.</p>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputbusinessactivitydescriptionstring-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>businessActivityDescription</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#updatecompanyonboardinginputbusinessactivitydescriptionstring-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputbusinessactivitydescriptionstring-" title="Direct link to updatecompanyonboardinginputbusinessactivitydescriptionstring-">​</a></h4>
 <blockquote>
-<p>Business activity description. Length must be from 0 to 1024 characters</p>
+<p>Description of the business activity.</p>
+<ul>
+<li>Length must be from 0 to 1024 characters.</li>
+</ul>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputmonthlypaymentvolumemonthlypaymentvolume-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>monthlyPaymentVolume</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/enums/monthly-payment-volume"><code>MonthlyPaymentVolume</code></a> <span class="badge badge--secondary">enum</span><a href="#updatecompanyonboardinginputmonthlypaymentvolumemonthlypaymentvolume-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputmonthlypaymentvolumemonthlypaymentvolume-" title="Direct link to updatecompanyonboardinginputmonthlypaymentvolumemonthlypaymentvolume-">​</a></h4>
 <blockquote>
-<p>Estimated monthly payment volume (euro)</p>
+<p>Estimated monthly payment volume (euro).</p>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputindividualultimatebeneficialownersindividualultimatebeneficialownerinput--"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>individualUltimateBeneficialOwners</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/inputs/individual-ultimate-beneficial-owner-input"><code>[IndividualUltimateBeneficialOwnerInput!]</code></a> <span class="badge badge--secondary">list</span> <span class="badge badge--secondary">input</span><a href="#updatecompanyonboardinginputindividualultimatebeneficialownersindividualultimatebeneficialownerinput--" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputindividualultimatebeneficialownersindividualultimatebeneficialownerinput--" title="Direct link to updatecompanyonboardinginputindividualultimatebeneficialownersindividualultimatebeneficialownerinput--">​</a></h4>
 <blockquote>
@@ -54,39 +67,82 @@
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputresidencyaddressresidencyaddressinput-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>residencyAddress</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/inputs/residency-address-input"><code>ResidencyAddressInput</code></a> <span class="badge badge--secondary">input</span><a href="#updatecompanyonboardinginputresidencyaddressresidencyaddressinput-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputresidencyaddressresidencyaddressinput-" title="Direct link to updatecompanyonboardinginputresidencyaddressresidencyaddressinput-">​</a></h4>
 <blockquote>
-<p>Residency address of the head office (Must be in a European country)</p>
+<p>Residency address of the head office.</p>
+<ul>
+<li>Must be in a European country.</li>
+</ul>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputemailstring-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>email</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#updatecompanyonboardinginputemailstring-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputemailstring-" title="Direct link to updatecompanyonboardinginputemailstring-">​</a></h4>
 <blockquote>
-<p>Email of the legal representative. Length must be from 0 to 255 characters</p>
+<p>Email of the legal representative.</p>
+<ul>
+<li>Length must be from 0 to 255 characters.</li>
+<li>Valid format (regex): /^[A-Z0-9_+.-]<em>[A-Z0-9_+-]@([A-Z0-9][A-Z0-9-]</em>.)+[A-Z]{2,}$/i</li>
+<li>Some email providers are not accepted by our system.</li>
+</ul>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputlanguagestring-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>language</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#updatecompanyonboardinginputlanguagestring-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputlanguagestring-" title="Direct link to updatecompanyonboardinginputlanguagestring-">​</a></h4>
 <blockquote>
-<p>Language of the onboarding process. Must be compliant with RFC 5646</p>
+<p>Language of the onboarding process.</p>
+<ul>
+<li>Must be compliant with RFC 5646.</li>
+</ul>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputisregisteredboolean-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>isRegistered</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/boolean"><code>Boolean</code></a> <span class="badge badge--secondary">scalar</span><a href="#updatecompanyonboardinginputisregisteredboolean-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputisregisteredboolean-" title="Direct link to updatecompanyonboardinginputisregisteredboolean-">​</a></h4>
 <blockquote>
-<p>Is company registered at RCS in its country</p>
+<p>Is company registered at RCS in its country.</p>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputonboardingidid--"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>onboardingId</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/id"><code>ID!</code></a> <span class="badge badge--secondary">non-null</span> <span class="badge badge--secondary">scalar</span><a href="#updatecompanyonboardinginputonboardingidid--" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputonboardingidid--" title="Direct link to updatecompanyonboardinginputonboardingidid--">​</a></h4>
 <blockquote>
-<p>Id of onboarding to be updated. Must be a valid UUID v4. Required</p>
+<p>ID of the onboarding to update.</p>
 </blockquote>
-<h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputvatnumberstring-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>vatNumber</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#updatecompanyonboardinginputvatnumberstring-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputvatnumberstring-" title="Direct link to updatecompanyonboardinginputvatnumberstring-">​</a></h4>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputvatnumberstring-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>vatNumber</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ●  </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#updatecompanyonboardinginputvatnumberstring-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputvatnumberstring-" title="Direct link to updatecompanyonboardinginputvatnumberstring-">​</a></h4>
 <blockquote>
-<p>VAT number</p>
+<p>VAT number of the company.</p>
+<ul>
+<li>(AT)?U[0-9]{8} |                              # Austria</li>
+<li>(BE)?0[0-9]{9} |                              # Belgium</li>
+<li>(BG)?[0-9]{9,10} |                            # Bulgaria</li>
+<li>(CY)?[0-9]{8}L |                              # Cyprus</li>
+<li>(CZ)?[0-9]{8,10} |                            # Czech Republic</li>
+<li>(DE)?[0-9]{9} |                               # Germany</li>
+<li>(DK)?[0-9]{8} |                               # Denmark</li>
+<li>(EE)?[0-9]{9} |                               # Estonia</li>
+<li>(EL|GR)?[0-9]{9} |                            # Greece</li>
+<li>(ES)?[0-9A-Z][0-9]{7}[0-9A-Z] |               # Spain</li>
+<li>(FI)?[0-9]{8} |                               # Finland</li>
+<li>(FR)?[0-9A-Z]{2}[0-9]{9} |                    # France</li>
+<li>(GB)?([0-9]{9}([0-9]{3})?|[A-Z]{2}[0-9]{3}) | # United Kingdom</li>
+<li>(HU)?[0-9]{8} |                               # Hungary</li>
+<li>(IE)?[0-9]S[0-9]{5}L |                        # Ireland</li>
+<li>(IT)?[0-9]{11} |                              # Italy</li>
+<li>(LT)?([0-9]{9}|[0-9]{12}) |                   # Lithuania</li>
+<li>(LU)?[0-9]{8} |                               # Luxembourg</li>
+<li>(LV)?[0-9]{11} |                              # Latvia</li>
+<li>(MT)?[0-9]{8} |                               # Malta</li>
+<li>(NL)?[0-9]{9}B[0-9]{2} |                      # Netherlands</li>
+<li>(PL)?[0-9]{10} |                              # Poland</li>
+<li>(PT)?[0-9]{9} |                               # Portugal</li>
+<li>(RO)?[0-9]{2,10} |                            # Romania</li>
+<li>(SE)?[0-9]{12} |                              # Sweden</li>
+<li>(SI)?[0-9]{8} |                               # Slovenia</li>
+<li>(SK)?[0-9]{10}                                # Slovakia</li>
+</ul>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputtaxidentificationnumberstring-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>taxIdentificationNumber</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#updatecompanyonboardinginputtaxidentificationnumberstring-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputtaxidentificationnumberstring-" title="Direct link to updatecompanyonboardinginputtaxidentificationnumberstring-">​</a></h4>
 <blockquote>
-<p>Tax Identification Number</p>
+<p>Tax Identification Number.</p>
+<ul>
+<li>Must be from 0 to 16 characters.</li>
+</ul>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputlegalrepresentativepersonaladdressaddressinformationinput-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>legalRepresentativePersonalAddress</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/inputs/address-information-input"><code>AddressInformationInput</code></a> <span class="badge badge--secondary">input</span><a href="#updatecompanyonboardinginputlegalrepresentativepersonaladdressaddressinformationinput-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputlegalrepresentativepersonaladdressaddressinformationinput-" title="Direct link to updatecompanyonboardinginputlegalrepresentativepersonaladdressaddressinformationinput-">​</a></h4>
 <blockquote>
-<p>Legal representative personal address</p>
+<p>Legal representative personal address.</p>
 </blockquote>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="updatecompanyonboardinginputtypeofrepresentationtypeofrepresentation-"><a href="#"><code style="font-weight:normal">UpdateCompanyOnboardingInput.<b>typeOfRepresentation</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a href="/enums/type-of-representation"><code>TypeOfRepresentation</code></a> <span class="badge badge--secondary">enum</span><a href="#updatecompanyonboardinginputtypeofrepresentationtypeofrepresentation-" class="hash-link" aria-label="Direct link to updatecompanyonboardinginputtypeofrepresentationtypeofrepresentation-" title="Direct link to updatecompanyonboardinginputtypeofrepresentationtypeofrepresentation-">​</a></h4>
 <blockquote>
-<p>Type of representation (legal representative or power of attorney)</p>
+<p>Type of representation (legal representative or power of attorney).</p>
 </blockquote>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="member-of">Member Of<a href="#member-of" class="hash-link" aria-label="Direct link to Member Of" title="Direct link to Member Of">​</a></h3>
 <p><a href="/mutations/update-company-onboarding"><code>updateCompanyOnboarding</code></a>  <span class="badge badge--secondary">mutation</span></p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/swan-io/api-reference/edit/main/docs/docs/inputs/update-company-onboarding-input.mdx" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/inputs/update-card-input"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">UpdateCardInput</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/inputs/update-individual-onboarding-input"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">UpdateIndividualOnboardingInput</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#fields" class="table-of-contents__link toc-highlight">Fields</a></li><li><a href="#member-of" class="table-of-contents__link toc-highlight">Member Of</a></li></ul></div></div></div></div></main></div></div></div></div>
