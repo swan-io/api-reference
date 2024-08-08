@@ -6,6 +6,7 @@
     "node": ">=18.0"
   },
   "scripts": {
+    "postinstall": "patch-package",
     "docusaurus": "docusaurus",
     "start": "yarn api-reference && docusaurus start --port 3001",
     "build": "docusaurus build",
@@ -32,7 +33,10 @@
     "file-loader": "^6.2.0",
     "graphiql": "^2.4.0",
     "graphql": "^16.6.0",
+    "graphql-config": "^5.1.0",
     "node-fetch": "^3.3.1",
+    "patch-package": "^8.0.0",
+    "postinstall-postinstall": "^2.1.0",
     "prism-react-renderer": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
