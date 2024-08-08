@@ -118,6 +118,10 @@ module.exports = {
         ),
         rootPath: "./docs",
         baseURL: "",
+        pretty: true,
+        printTypeOptions: {
+          useApiGroup: false,
+        },
         loaders: {
           GraphQLFileLoader: "@graphql-tools/graphql-file-loader",
         },
