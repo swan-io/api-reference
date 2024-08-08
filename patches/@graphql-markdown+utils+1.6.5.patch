@@ -1,17 +1,19 @@
 diff --git a/node_modules/@graphql-markdown/utils/dist/string.js b/node_modules/@graphql-markdown/utils/dist/string.js
-index bcd25c1..854c494 100644
+index f698e54..e9ec053 100644
 --- a/node_modules/@graphql-markdown/utils/dist/string.js
 +++ b/node_modules/@graphql-markdown/utils/dist/string.js
-@@ -160,8 +160,17 @@ exports.toHTMLUnicode = toHTMLUnicode;
+@@ -165,8 +165,19 @@ exports.toHTMLUnicode = toHTMLUnicode;
   * ```
   *
   */
 +const CODEBLOCK_REGEXP = /(```(.|\s)+```)/;
 +
  const escapeMDX = (str) => {
--    return `${String(str)}`.replace(/[<>{}]/g, exports.toHTMLUnicode);
-+    const codeblock = str.match(CODEBLOCK_REGEXP);
-+    const output = `${String(str)}`.replace(/[<>{}]/g, exports.toHTMLUnicode);
+-    return `${String(str)}`.replace(/(?<!`)([{<>}])(?=(?:[^`]*`[^`]*`)*[^`]*$)/g, exports.toHTMLUnicode);
++    const forced = `${String(str)}`;
++
++    const codeblock = forced.match(CODEBLOCK_REGEXP);
++    const output = forced.replace(/(?<!`)([{<>}])(?=(?:[^`]*`[^`]*`)*[^`]*$)/g, exports.toHTMLUnicode);
 +
 +    if (codeblock != null) {
 +        return output.replace(CODEBLOCK_REGEXP, codeblock[0]);

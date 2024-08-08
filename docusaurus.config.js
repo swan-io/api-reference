@@ -118,7 +118,6 @@ module.exports = {
         ),
         rootPath: "./docs",
         baseURL: "",
-        pretty: true,
         printTypeOptions: {
           useApiGroup: false,
         },
