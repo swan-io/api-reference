@@ -91,7 +91,13 @@ module.exports = {
     mermaid: true,
   },
   themes: ["@docusaurus/theme-mermaid"],
-  scripts: [],
+  scripts: [
+    {
+      src: "https://app.outverse.com/widgetverse/swan.js",
+      async: true,
+      defer: true,
+    },
+  ],
   presets: [
     [
       "@docusaurus/preset-classic",
