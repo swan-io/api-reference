@@ -106,13 +106,13 @@ body {
 }
 
 .markdown h2 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
 }
 
 .markdown h3 {
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .docusaurus-highlight-code-line {
@@ -129,10 +129,6 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 pre {
   line-height: 1.7;
 }
-
-/* .menu__list {
-   transition: none !important;
- } */
 
 .graphiql-container {
   flex-grow: 1;
@@ -243,7 +239,128 @@ pre {
   }
 }
 
-.navbar__link[href="https://docs.swan.io/changelog"] svg
-{
-  display: none;
+.explorer-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e9e0f2;
+  border: 1px solid #c0b3e1;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  padding: 8px 32px 8px 16px;
+  font-size: 14px;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.explorer-badge:hover {
+  background: var(--ifm-navbar-link-hover-color);
+  color: white;
+  text-decoration: none;
+  border-color: var(--ifm-color-primary);
+}
+
+.explorer-badge::before {
+  content: "🔍";
+  margin-right: 8px;
+}
+
+.tabs-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.04);
+  margin: 24px 0;
+  padding: 0 24px 24px 24px;
+  border: 1px solid #edeff3;
+}
+
+.tabs {
+  background: #eff3f9;
+  margin: 0 -24px;
+  padding: 3px 3px 0;
+  border-radius: 8px 8px 0 0;
+}
+
+.tabs__item {
+  padding: 0.75em 1.5em;
+}
+
+.tabs__item--active {
+  background: #fff;
+  color: var(--ifm-color-primary);
+  border-bottom: 2px solid var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+html[data-theme="dark"] .tabs-container {
+  background: #1e293b;
+  border-bottom-color: #475569;
+}
+
+html[data-theme="dark"] .tabs {
+  background: #334155;
+}
+
+html[data-theme="dark"] .tabs__item--active {
+  background: #1e293b;
+}
+
+.navbar__link.swan-api-explorer,
+.swan-unified-nav {
+  padding: 0.5rem 1rem;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.65s ease;
+}
+
+.navbar__link.swan-api-explorer:hover,
+.swan-unified-nav:hover {
+  background: none;
+  border-color: #94a3b8;
+}
+
+.swan-unified-nav {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.swan-unified-nav a {
+  padding: 0.5rem 1rem;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.swan-unified-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #94a3b8;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.swan-unified-nav a:hover {
+  opacity: 0.8;
+}
+
+.swan-unified-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.swan-unified-nav .separator {
+  width: 1px;
+  height: 20px;
+  background: #cbd5e1;
 }

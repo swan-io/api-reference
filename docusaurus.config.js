@@ -61,14 +61,18 @@ module.exports = {
         {
           position: "right",
           href: "https://explorer.swan.io/",
-          label: "API Explorer",
+          label: "API Explorer", 
+          className: "swan-api-explorer"
         },
         {
-          position: "right",
-          href: "https://docs.swan.io/changelog",
-          label: "Changelog",
-          target: "_self",
-        },
+          type: "html",
+          position: "right", 
+          value: `<div class="swan-unified-nav">
+            <a href="https://docs.swan.io/changelog">Changelog</a>
+            <div class="separator"></div>
+            <a href="https://docs.swan.io/preview">Preview</a>
+          </div>`
+        }
       ],
     },
     // footer: {
@@ -102,6 +106,9 @@ module.exports = {
     [
       "@docusaurus/preset-classic",
       {
+        googleTagManager: {
+          containerId: 'GTM-NWPK43X',
+        },
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
