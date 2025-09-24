@@ -104,6 +104,16 @@ body {
   font-size: 32px;
   font-weight: 400;
 }
+.markdown h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--ifm-color-primary-light) 0%, transparent 100%);
+  margin-top: 5px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
 
 .markdown h2 {
   font-size: 24px;
@@ -113,6 +123,18 @@ body {
 .markdown h3 {
   font-size: 20px;
   font-weight: 600;
+  position: relative;
+  padding-left: 16px;
+}
+.markdown h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--ifm-color-primary-light);
+  border-radius: 2px;
 }
 
 .docusaurus-highlight-code-line {
