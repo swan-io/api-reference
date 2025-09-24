@@ -386,3 +386,195 @@ html[data-theme="dark"] .tabs__item--active {
   height: 20px;
   background: #cbd5e1;
 }
+
+/* ==========================================
+   GRAPHQL FIELD STYLING - OPTIMIZED
+   ========================================== */
+
+/* Base field styling */
+.markdown h4[id*="--"], .markdown h4[id$="-"],
+.markdown h5[id*="--"], .markdown h5[id$="-"] {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  transition: all 0.2s ease;
+}
+
+/* H5 overrides */
+.markdown h5[id*="--"], .markdown h5[id$="-"] {
+  margin-left: 24px;
+  background: #f9fafb;
+  border-left: 3px solid var(--ifm-color-primary-light);
+  font-size: 13px;
+}
+
+/* Hover states */
+.markdown h4[id*="--"]:hover, .markdown h4[id$="-"]:hover { background: #f1f5f9; border-color: #cbd5e1; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
+.markdown h5[id*="--"]:hover, .markdown h5[id$="-"]:hover { background: #f3f4f6; }
+
+/* Field name */
+.markdown h4[id*="--"] > code:first-of-type, .markdown h4[id$="-"] > code:first-of-type,
+.markdown h5[id*="--"] > code:first-of-type, .markdown h5[id$="-"] > code:first-of-type {
+  font-family: 'Monaco', 'Consolas', 'SF Mono', monospace !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  color: var(--ifm-color-primary) !important;
+  font-weight: 600 !important;
+  flex: 1 1 auto;
+  min-width: 200px;
+}
+
+/* Type links */
+.markdown h4[id*="--"] a, .markdown h4[id$="-"] a,
+.markdown h5[id*="--"] a, .markdown h5[id$="-"] a {
+  flex: 0 1 auto;
+  white-space: nowrap;
+  min-width: min-content;
+}
+
+.markdown h4[id*="--"] a code, .markdown h4[id$="-"] a code,
+.markdown h5[id*="--"] a code, .markdown h5[id$="-"] a code {
+  font-family: 'Monaco', 'Consolas', 'SF Mono', monospace !important;
+  background: #e2e8f0 !important;
+  color: #475569 !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  font-size: inherit !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+}
+
+.markdown h4[id*="--"] a:hover code, .markdown h4[id$="-"] a:hover code,
+.markdown h5[id*="--"] a:hover code, .markdown h5[id$="-"] a:hover code {
+  background: var(--ifm-color-primary-light) !important;
+  color: white !important;
+}
+
+/* Hide elements */
+.markdown h4[id*="--"] span[style*="font-size: 0.5em"], .markdown h4[id$="-"] span[style*="font-size: 0.5em"],
+.markdown h5[id*="--"] span[style*="font-size: 0.5em"], .markdown h5[id$="-"] span[style*="font-size: 0.5em"],
+.markdown h4[id*="--"] .hash-link, .markdown h4[id$="-"] .hash-link,
+.markdown h5[id*="--"] .hash-link, .markdown h5[id$="-"] .hash-link {
+  display: none;
+}
+
+/* Badges */
+.markdown h4[id*="--"] .badge, .markdown h4[id$="-"] .badge,
+.markdown h5[id*="--"] .badge, .markdown h5[id$="-"] .badge {
+  font-size: 10px !important;
+  padding: 3px 8px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.025em !important;
+  border: 1px solid transparent;
+  flex-shrink: 0;
+  margin-left: auto;
+  order: 999;
+}
+
+/* Badge colors: grey default, red for non-null */
+.markdown h4[id*="--"] .badge--secondary, .markdown h4[id$="-"] .badge--secondary,
+.markdown h5[id*="--"] .badge--secondary, .markdown h5[id$="-"] .badge--secondary {
+  background: #f3f4f6 !important;
+  color: #6b7280 !important;
+  border-color: #d1d5db !important;
+}
+
+.markdown h4[id*="--"] .badge--secondary:nth-of-type(1):not(:last-of-type), .markdown h4[id$="-"] .badge--secondary:nth-of-type(1):not(:last-of-type),
+.markdown h5[id*="--"] .badge--secondary:nth-of-type(1):not(:last-of-type), .markdown h5[id$="-"] .badge--secondary:nth-of-type(1):not(:last-of-type) {
+  background: #fee2e2 !important;
+  color: #991b1b !important;
+  border-color: #fecaca !important;
+}
+
+.markdown h4[id*="--"] .badge + .badge, .markdown h4[id$="-"] .badge + .badge,
+.markdown h5[id*="--"] .badge + .badge, .markdown h5[id$="-"] .badge + .badge {
+  margin-left: 4px;
+}
+
+/* Descriptions */
+.markdown h4[id*="--"] + p, .markdown h4[id$="-"] + p,
+.markdown h5[id*="--"] + p, .markdown h5[id$="-"] + p,
+.markdown h4[id*="--"] + p + p, .markdown h4[id$="-"] + p + p,
+.markdown h5[id*="--"] + p + p, .markdown h5[id$="-"] + p + p {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  padding-left: 20px;
+.markdown h5[id*="--"] + p + p, .markdown h5[id$="-"] + p + p {
+  margin-left: 24px;
+  padding-left: 16px;
+  font-size: 13px;
+}
+
+/* Description links */
+.markdown h4[id*="--"] + p a, .markdown h4[id$="-"] + p a,
+.markdown h5[id*="--"] + p a, .markdown h5[id$="-"] + p a,
+.markdown h4[id*="--"] + p + p a, .markdown h4[id$="-"] + p + p a,
+.markdown h5[id*="--"] + p + p a, .markdown h5[id$="-"] + p + p a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ifm-color-primary-light);
+}
+
+.markdown h4[id*="--"] + p a:hover, .markdown h4[id$="-"] + p a:hover,
+.markdown h5[id*="--"] + p a:hover, .markdown h5[id$="-"] + p a:hover,
+.markdown h4[id*="--"] + p + p a:hover, .markdown h4[id$="-"] + p + p a:hover,
+.markdown h5[id*="--"] + p + p a:hover, .markdown h5[id$="-"] + p + p a:hover {
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .markdown h4[id*="--"], .markdown h4[id$="-"],
+  .markdown h5[id*="--"], .markdown h5[id$="-"] {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+  
+  .markdown h4[id*="--"] > code:first-of-type, .markdown h4[id$="-"] > code:first-of-type,
+  .markdown h5[id*="--"] > code:first-of-type, .markdown h5[id$="-"] > code:first-of-type {
+    min-width: unset;
+  }
+  
+  .markdown h4[id*="--"] a, .markdown h4[id$="-"] a,
+  .markdown h5[id*="--"] a, .markdown h5[id$="-"] a {
+    justify-content: flex-end;
+  }
+  
+  .markdown h5[id*="--"], .markdown h5[id$="-"] {
+    margin-left: 12px;
+  }
+}
+
+/* Dark mode */
+html[data-theme="dark"] .markdown h4[id*="--"], html[data-theme="dark"] .markdown h4[id$="-"] { background: #1e293b; border-color: #334155; }
+html[data-theme="dark"] .markdown h5[id*="--"], html[data-theme="dark"] .markdown h5[id$="-"] { background: #0f172a; border-color: #1e293b; }
+html[data-theme="dark"] .markdown h4[id*="--"]:hover, html[data-theme="dark"] .markdown h4[id$="-"]:hover { background: #334155; border-color: #475569; }
+html[data-theme="dark"] .markdown h5[id*="--"]:hover, html[data-theme="dark"] .markdown h5[id$="-"]:hover { background: #1e293b; }
+
+html[data-theme="dark"] .markdown h4[id*="--"] a code, html[data-theme="dark"] .markdown h4[id$="-"] a code,
+html[data-theme="dark"] .markdown h5[id*="--"] a code, html[data-theme="dark"] .markdown h5[id$="-"] a code {
+  background: #374151 !important;
+  color: #d1d5db !important;
+}
+
+html[data-theme="dark"] .markdown h4[id*="--"] + p, html[data-theme="dark"] .markdown h4[id$="-"] + p,
+html[data-theme="dark"] .markdown h5[id*="--"] + p, html[data-theme="dark"] .markdown h5[id$="-"] + p,
+html[data-theme="dark"] .markdown h4[id*="--"] + p + p, html[data-theme="dark"] .markdown h4[id$="-"] + p + p,
+html[data-theme="dark"] .markdown h5[id*="--"] + p + p, html[data-theme="dark"] .markdown h5[id$="-"] + p + p {
+  color: #94a3b8;
+  border-left-color: #334155;
+}
