@@ -511,6 +511,18 @@ html[data-theme="dark"] .tabs__item--active {
   margin-top: 8px;
   margin-bottom: 16px;
   padding-left: 20px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  border-left: 2px solid #f1f5f9;
+}
+
+.markdown h4[id*="--"] + p + p, .markdown h4[id$="-"] + p + p,
+.markdown h5[id*="--"] + p + p, .markdown h5[id$="-"] + p + p {
+  margin-top: 0;
+}
+
+.markdown h5[id*="--"] + p, .markdown h5[id$="-"] + p,
 .markdown h5[id*="--"] + p + p, .markdown h5[id$="-"] + p + p {
   margin-left: 24px;
   padding-left: 16px;
