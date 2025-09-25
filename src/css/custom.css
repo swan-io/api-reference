@@ -468,7 +468,7 @@ html[data-theme="dark"] .tabs__item--active {
   display: none;
 }
 
-/* Badges */
+/* Badge styling - Default grey for all badges */
 .markdown h4[id*="--"] .badge, .markdown h4[id$="-"] .badge,
 .markdown h5[id*="--"] .badge, .markdown h5[id$="-"] .badge {
   font-size: 10px !important;
@@ -481,23 +481,20 @@ html[data-theme="dark"] .tabs__item--active {
   flex-shrink: 0;
   margin-left: auto;
   order: 999;
-}
-
-/* Badge colors: grey default, red for non-null */
-.markdown h4[id*="--"] .badge--secondary, .markdown h4[id$="-"] .badge--secondary,
-.markdown h5[id*="--"] .badge--secondary, .markdown h5[id$="-"] .badge--secondary {
   background: #f3f4f6 !important;
   color: #6b7280 !important;
   border-color: #d1d5db !important;
 }
 
-.markdown h4[id*="--"] .badge--secondary:nth-of-type(1):not(:last-of-type), .markdown h4[id$="-"] .badge--secondary:nth-of-type(1):not(:last-of-type),
-.markdown h5[id*="--"] .badge--secondary:nth-of-type(1):not(:last-of-type), .markdown h5[id$="-"] .badge--secondary:nth-of-type(1):not(:last-of-type) {
+/* Non-null badges - Red styling applied via JavaScript */
+.markdown h4[id*="--"] .badge.non-null, .markdown h4[id$="-"] .badge.non-null,
+.markdown h5[id*="--"] .badge.non-null, .markdown h5[id$="-"] .badge.non-null {
   background: #fee2e2 !important;
   color: #991b1b !important;
   border-color: #fecaca !important;
 }
 
+/* Badge spacing */
 .markdown h4[id*="--"] .badge + .badge, .markdown h4[id$="-"] .badge + .badge,
 .markdown h5[id*="--"] .badge + .badge, .markdown h5[id$="-"] .badge + .badge {
   margin-left: 4px;
@@ -589,4 +586,23 @@ html[data-theme="dark"] .markdown h4[id*="--"] + p + p, html[data-theme="dark"] 
 html[data-theme="dark"] .markdown h5[id*="--"] + p + p, html[data-theme="dark"] .markdown h5[id$="-"] + p + p {
   color: #94a3b8;
   border-left-color: #334155;
+}
+
+/* Dark mode badge styling */
+html[data-theme="dark"] .markdown h4[id*="--"] .badge, 
+html[data-theme="dark"] .markdown h4[id$="-"] .badge,
+html[data-theme="dark"] .markdown h5[id*="--"] .badge, 
+html[data-theme="dark"] .markdown h5[id$="-"] .badge {
+  background: #374151 !important;
+  color: #d1d5db !important;
+  border-color: #4b5563 !important;
+}
+
+html[data-theme="dark"] .markdown h4[id*="--"] .badge.non-null, 
+html[data-theme="dark"] .markdown h4[id$="-"] .badge.non-null,
+html[data-theme="dark"] .markdown h5[id*="--"] .badge.non-null, 
+html[data-theme="dark"] .markdown h5[id$="-"] .badge.non-null {
+  background: #991b1b !important;
+  color: #fee2e2 !important;
+  border-color: #b91c1c !important;
 }
