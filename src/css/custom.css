@@ -515,6 +515,14 @@ pre {
   border-color: #fecaca !important;
 }
 
+.markdown h4[id*="--"] .badge--deprecated, .markdown h4[id$="-"] .badge--deprecated,
+.markdown h5[id*="--"] .badge--deprecated, .markdown h5[id$="-"] .badge--deprecated {
+  background: #fbd6b6 !important;
+  color: #935c2c !important;
+  border-color: #f9c292 !important;
+  font-weight: 800;
+}
+
 .markdown h4[id*="--"] .badge + .badge, .markdown h4[id$="-"] .badge + .badge,
 .markdown h5[id*="--"] .badge + .badge, .markdown h5[id$="-"] .badge + .badge {
   margin-left: 4px;
