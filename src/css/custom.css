@@ -544,7 +544,9 @@ pre {
 
 /* Description paragraphs */
 .markdown h4[id*="--"] + p, .markdown h4[id$="-"] + p,
-.markdown h5[id*="--"] + p, .markdown h5[id$="-"] + p {
+.markdown h5[id*="--"] + p, .markdown h5[id$="-"] + p,
+.markdown h4[id*="--"] + p + p, .markdown h4[id$="-"] + p + p,
+.markdown h5[id*="--"] + p + p, .markdown h5[id$="-"] + p + p {
   margin-top: 8px;
   margin-bottom: 16px;
   padding-left: 20px;
@@ -630,6 +632,10 @@ pre {
 /* Member Of - Red */
 .markdown h3[id="member-of"] + p {
   border-left: 3px solid var(--relationship-member-of);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
 }
 
 /* Hide bullet separators in relationship sections */
@@ -651,6 +657,27 @@ pre {
   text-decoration: none;
   transition: all 0.2s ease;
   margin-right: 4px;
+}
+
+/* Special styling for Member Of vertical list */
+.markdown h3[id="member-of"] + p a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  margin-right: 0;
+}
+
+.markdown h3[id="member-of"] + p a:hover {
+  border-color: var(--ifm-color-primary-light);
+  box-shadow: 0 2px 4px rgba(98, 64, 181, 0.08);
+}
+
+.markdown h3[id="member-of"] + p .badge {
+  margin-left: auto;
 }
 
 .markdown h3[id="interfaces"] + p a code,
@@ -735,5 +762,10 @@ pre {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+  
+  /* Member Of maintains vertical list on mobile */
+  .markdown h3[id="member-of"] + p {
+    gap: 8px;
   }
 }
