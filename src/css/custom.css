@@ -511,7 +511,7 @@ pre {
   flex-shrink: 0;
   background: #f3f4f6 !important;
   color: #6b7280 !important;
-  margin: 1px 0;
+  margin: 3px 0 0 0;
 }
 
 .markdown h4[id*="--"] .badge.non-null, .markdown h4[id$="-"] .badge.non-null,
@@ -542,7 +542,7 @@ pre {
   display: none;
 }
 
-/* Description paragraphs */
+/* Description paragraphs and lists */
 .markdown h4[id*="--"] + p, .markdown h4[id$="-"] + p,
 .markdown h5[id*="--"] + p, .markdown h5[id$="-"] + p,
 .markdown h4[id*="--"] + p + p, .markdown h4[id$="-"] + p + p,
@@ -555,14 +555,40 @@ pre {
   line-height: 1.6;
 }
 
+/* Description lists with proper indentation */
+.markdown h4[id*="--"] + p + ul, .markdown h4[id$="-"] + p + ul,
+.markdown h5[id*="--"] + p + ul, .markdown h5[id$="-"] + p + ul,
+.markdown h4[id*="--"] + p + p + ul, .markdown h4[id$="-"] + p + p + ul,
+.markdown h5[id*="--"] + p + p + ul, .markdown h5[id$="-"] + p + p + ul {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  margin-left: 20px;
+  padding-left: 20px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .markdown h4[id*="--"] + p + p, .markdown h4[id$="-"] + p + p,
-.markdown h5[id*="--"] + p + p, .markdown h5[id$="-"] + p + p {
+.markdown h5[id*="--"] + p + p, .markdown h5[id$="-"] + p + p,
+.markdown h4[id*="--"] + p + ul, .markdown h4[id$="-"] + p + ul,
+.markdown h5[id*="--"] + p + ul, .markdown h5[id$="-"] + p + ul,
+.markdown h4[id*="--"] + p + p + ul, .markdown h4[id$="-"] + p + p + ul,
+.markdown h5[id*="--"] + p + p + ul, .markdown h5[id$="-"] + p + p + ul {
   margin-top: 0;
 }
 
 .markdown h5[id*="--"] + p, .markdown h5[id$="-"] + p,
 .markdown h5[id*="--"] + p + p, .markdown h5[id$="-"] + p + p {
   margin-left: 24px;
+  padding-left: 16px;
+  font-size: 14px;
+}
+
+/* H5 lists with additional left margin */
+.markdown h5[id*="--"] + p + ul, .markdown h5[id$="-"] + p + ul,
+.markdown h5[id*="--"] + p + p + ul, .markdown h5[id$="-"] + p + p + ul {
+  margin-left: 44px;
   padding-left: 16px;
   font-size: 14px;
 }
