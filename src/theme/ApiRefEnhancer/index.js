@@ -2,25 +2,25 @@
 export default (function() {
   if (typeof window === 'undefined') return;
 
+  let isProcessing = false;
+
   function enhanceApiFields() {
-    const fieldHeaders = document.querySelectorAll('h4[id*="--"], h4[id$="-"], h5[id*="--"], h5[id$="-"]');
+    if (isProcessing) return;
+    isProcessing = true;
+
+    const fieldHeaders = document.querySelectorAll('h4[id*="--"]:not(.enhanced), h4[id$="-"]:not(.enhanced), h5[id*="--"]:not(.enhanced), h5[id$="-"]:not(.enhanced)');
     
     fieldHeaders.forEach(header => {
-      // Skip if already processed
+      header.classList.add('enhanced');
+      
       if (header.querySelector('.param-info')) return;
       
       const children = Array.from(header.children);
-      const badges = [];
-      const nonBadgeElements = [];
-      
-      // Single pass classification
-      children.forEach(child => {
-        child.classList.contains('badge') ? badges.push(child) : nonBadgeElements.push(child);
-      });
+      const badges = children.filter(child => child.classList.contains('badge'));
+      const nonBadgeElements = children.filter(child => !child.classList.contains('badge'));
       
       if (badges.length === 0) return;
       
-      // Create containers with single DOM operation
       const fragment = document.createDocumentFragment();
       
       const paramContainer = document.createElement('div');
@@ -30,7 +30,9 @@ export default (function() {
       const badgeContainer = document.createElement('div');
       badgeContainer.className = 'badge-container';
       badges.forEach(badge => {
-        badge.classList.toggle('non-null', badge.textContent.includes('non-null'));
+        if (badge.textContent.includes('non-null')) {
+          badge.classList.add('non-null');
+        }
         badgeContainer.appendChild(badge);
       });
       
@@ -38,17 +40,21 @@ export default (function() {
       fragment.appendChild(badgeContainer);
       header.appendChild(fragment);
     });
+
+    isProcessing = false;
   }
 
-  // Run immediately or on DOMContentLoaded
-  document.readyState === 'loading' 
-    ? document.addEventListener('DOMContentLoaded', enhanceApiFields)
-    : enhanceApiFields();
+  // Simple initialization
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', enhanceApiFields, { once: true });
+  } else {
+    enhanceApiFields();
+  }
 
-  // Optimized mutation observer with debouncing
-  let timeout;
+  // Simplified mutation observer
   new MutationObserver(() => {
-    clearTimeout(timeout);
-    timeout = setTimeout(enhanceApiFields, 50);
+    if (!isProcessing) {
+      setTimeout(enhanceApiFields, 16);
+    }
   }).observe(document.body, { childList: true, subtree: true });
 })();

@@ -12,10 +12,7 @@
   --ifm-color-primary: #6240b5;
   --ifm-navbar-link-hover-color: #8166c4;
   --ifm-color-primary-dark: #4e3391;
-  --ifm-color-primary-darker: #3b266d;
-  --ifm-color-primary-darkest: #271a48;
   --ifm-color-primary-light: #a18cd3;
-  --ifm-color-primary-lighter: #c0b3e1;
   --ifm-color-primary-lightest: #e0d9f0;
   --ifm-code-font-size: 90%;
   --ifm-navbar-height: 66px;
@@ -367,10 +364,10 @@ pre {
 }
 
 /* ==========================================
-   GRAPHQL FIELD STYLING - OPTIMIZED
+   GRAPHQL FIELD STYLING - PRE-STYLED FOR PERFORMANCE
    ========================================== */
 
-/* Base field styling */
+/* PRE-STYLING: Apply visual container styles immediately to prevent FOUC */
 .markdown h4[id*="--"], .markdown h4[id$="-"],
 .markdown h5[id*="--"], .markdown h5[id$="-"] {
   background: #f8fafc;
@@ -379,57 +376,81 @@ pre {
   border-radius: 6px;
   padding: 16px 20px;
   margin: 8px 0;
+  font-size: 14px;
+  font-weight: normal;
+  transition: all 0.2s ease;
+  line-height: 1.5;
+}
+
+/* H5 specific pre-styling */
+.markdown h5[id*="--"], .markdown h5[id$="-"] {
+  margin-left: 24px;
+  background: #f9fafb;
+}
+
+/* PRE-STYLE: Basic code elements to look similar before JS processes them */
+.markdown h4[id*="--"] code, .markdown h4[id$="-"] code,
+.markdown h5[id*="--"] code, .markdown h5[id$="-"] code {
+  font-family: 'Monaco', 'Consolas', 'SF Mono', monospace;
+  background: #c7c7c8;
+  color: #374151;
+  border: 1px solid #abaaad;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  margin: 1px 2px;
+}
+
+/* PRE-STYLE: Parameter names (first code element) */
+.markdown h4[id*="--"] code:first-of-type, .markdown h4[id$="-"] code:first-of-type,
+.markdown h5[id*="--"] code:first-of-type, .markdown h5[id$="-"] code:first-of-type {
+  background: #e8e7eb;
+  color: #5c5a5f;
+  font-weight: 600;
+}
+
+/* ENHANCED STYLING: Applied after JavaScript processing */
+.markdown h4[id*="--"].enhanced, .markdown h4[id$="-"].enhanced,
+.markdown h5[id*="--"].enhanced, .markdown h5[id$="-"].enhanced {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
-  font-size: 14px;
-  font-weight: normal;
-  transition: all 0.2s ease;
 }
 
-/* H5 specific styles */
-.markdown h5[id*="--"], .markdown h5[id$="-"] {
-  margin-left: 24px;
-  background: #f9fafb;
-  font-size: 14px;
-}
-
-/* Hover states */
-.markdown h4[id*="--"]:hover, .markdown h4[id$="-"]:hover { 
+/* Enhanced hover states */
+.markdown h4[id*="--"].enhanced:hover, .markdown h4[id$="-"].enhanced:hover { 
   background: #f1f5f9; 
   border-color: #cbd5e1; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
 }
-.markdown h5[id*="--"]:hover, .markdown h5[id$="-"]:hover { 
+.markdown h5[id*="--"].enhanced:hover, .markdown h5[id$="-"].enhanced:hover { 
   background: #f3f4f6; 
 }
 
-/* Container styles */
-/* Keep your existing param-info styling but add line-height */
+/* Container styles for enhanced fields */
 .markdown h4[id*="--"] .param-info, .markdown h4[id$="-"] .param-info,
 .markdown h5[id*="--"] .param-info, .markdown h5[id$="-"] .param-info {
   display: flex;
-  align-items: flex-start; /* Important: change from center */
+  align-items: flex-start;
   gap: 8px;
   flex: 1 1 auto;
   min-width: 200px;
   flex-wrap: wrap;
 }
 
-/* Update the badge container to match the param-info alignment */
 .markdown h4[id*="--"] .badge-container, .markdown h4[id$="-"] .badge-container,
 .markdown h5[id*="--"] .badge-container, .markdown h5[id$="-"] .badge-container {
   display: flex;
   flex-direction: row;
   gap: 4px;
   flex: 0 0 auto;
-  align-items: flex-start; /* Changed from center to flex-start */
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
-/* Typography - Parameter names (first anchor's code element) - Override with higher specificity */
+/* Enhanced typography - Parameter names (first anchor's code element) */
 .markdown h4[id*="--"] .param-info > a:first-child code, .markdown h4[id$="-"] .param-info > a:first-child code,
 .markdown h5[id*="--"] .param-info > a:first-child code, .markdown h5[id$="-"] .param-info > a:first-child code {
   font-family: 'Monaco', 'Consolas', 'SF Mono', monospace !important;
@@ -441,16 +462,14 @@ pre {
   font-weight: 600 !important;
 }
 
-
-
-/* Typography - Links */
+/* Enhanced typography - Links */
 .markdown h4[id*="--"] .param-info a, .markdown h4[id$="-"] .param-info a,
 .markdown h5[id*="--"] .param-info a, .markdown h5[id$="-"] .param-info a {
   text-decoration: none;
-  margin: 1px 0; /* This creates vertical spacing when items wrap */
+  margin: 1px 0;
 }
 
-/* General styling for all code elements in param-info */
+/* Enhanced styling for all code elements in param-info */
 .markdown h4[id*="--"] .param-info a code, .markdown h4[id$="-"] .param-info a code,
 .markdown h5[id*="--"] .param-info a code, .markdown h5[id$="-"] .param-info a code {
   font-family: 'Monaco', 'Consolas', 'SF Mono', monospace !important;
@@ -465,6 +484,7 @@ pre {
   transition: all 0.2s ease;
 }
 
+/* Enhanced hover effects */
 .markdown h4[id*="--"] .param-info a:hover code, .markdown h4[id$="-"] .param-info a:hover code,
 .markdown h5[id*="--"] .param-info a:hover code, .markdown h5[id$="-"] .param-info a:hover code {
   background: var(--ifm-navbar-link-hover-color) !important;
@@ -510,9 +530,7 @@ pre {
 
 /* Description paragraphs */
 .markdown h4[id*="--"] + p, .markdown h4[id$="-"] + p,
-.markdown h5[id*="--"] + p, .markdown h5[id$="-"] + p,
-.markdown h4[id*="--"] + p + p, .markdown h4[id$="-"] + p + p,
-.markdown h5[id*="--"] + p + p, .markdown h5[id$="-"] + p + p {
+.markdown h5[id*="--"] + p, .markdown h5[id$="-"] + p {
   margin-top: 8px;
   margin-bottom: 16px;
   padding-left: 20px;
@@ -558,14 +576,6 @@ pre {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-  }
-}
-
-@media (max-width: 600px) {
-  .markdown h4[id*="--"] .badge-container, .markdown h4[id$="-"] .badge-container,
-  .markdown h5[id*="--"] .badge-container, .markdown h5[id$="-"] .badge-container {
-    flex-direction: column;
-    align-items: flex-end;
   }
 }
 
