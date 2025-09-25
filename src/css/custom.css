@@ -23,6 +23,12 @@
     Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI",
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
+
+  /* Relationship section colors */
+  --relationship-interfaces: #a0c8d7;
+  --relationship-implemented-by: #79e4b6;
+  --relationship-returned-by: #ffe57f;
+  --relationship-member-of: #f7808e;
 }
 
 body {
@@ -577,7 +583,123 @@ pre {
   color: var(--ifm-color-primary);
 }
 
-/* Responsive behavior */
+/* ==========================================
+   RELATIONSHIP SECTIONS - UNIQUE BORDER COLORS
+   ========================================== */
+
+/* Shared base styling for all relationship sections */
+.markdown h3[id="interfaces"] + p,
+.markdown h3[id="interfaces"] + h4,
+.markdown h3[id="implemented-by"] + p,
+.markdown h3[id="returned-by"] + p,
+.markdown h3[id="member-of"] + p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  margin: 16px 0;
+  line-height: 1.4;
+}
+
+/* Interfaces - Blue */
+.markdown h3[id="interfaces"] + p,
+.markdown h3[id="interfaces"] + h4 {
+  border-left: 3px solid var(--relationship-interfaces);
+}
+
+.markdown h3[id="interfaces"] + h4 {
+  font-size: 14px;
+  font-weight: normal;
+  margin: 16px 0 8px 0;
+}
+
+/* Implemented By - Green */
+.markdown h3[id="implemented-by"] + p {
+  border-left: 3px solid var(--relationship-implemented-by);
+}
+
+/* Returned By - Orange */
+.markdown h3[id="returned-by"] + p {
+  border-left: 3px solid var(--relationship-returned-by);
+}
+
+/* Member Of - Red */
+.markdown h3[id="member-of"] + p {
+  border-left: 3px solid var(--relationship-member-of);
+}
+
+/* Hide bullet separators in relationship sections */
+.markdown h3[id="interfaces"] + p span[style*="font-size: 0.5em"],
+.markdown h3[id="implemented-by"] + p span[style*="font-size: 0.5em"],
+.markdown h3[id="returned-by"] + p span[style*="font-size: 0.5em"],
+.markdown h3[id="member-of"] + p span[style*="font-size: 0.5em"] {
+  display: none;
+}
+
+/* Consistent link and code styling across relationship sections */
+.markdown h3[id="interfaces"] + p a,
+.markdown h3[id="interfaces"] + h4 a,
+.markdown h3[id="implemented-by"] + p a,
+.markdown h3[id="returned-by"] + p a,
+.markdown h3[id="member-of"] + p a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-right: 4px;
+}
+
+.markdown h3[id="interfaces"] + p a code,
+.markdown h3[id="interfaces"] + h4 a code,
+.markdown h3[id="implemented-by"] + p a code,
+.markdown h3[id="returned-by"] + p a code,
+.markdown h3[id="member-of"] + p a code {
+  font-family: 'Monaco', 'Consolas', 'SF Mono', monospace !important;
+  background: #e8e7eb !important;
+  color: #5c5a5f !important;
+  border: 1px solid #abaaad !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  margin-right: 8px;
+  transition: all 0.2s ease;
+}
+
+.markdown h3[id="interfaces"] + p a:hover code,
+.markdown h3[id="interfaces"] + h4 a:hover code,
+.markdown h3[id="implemented-by"] + p a:hover code,
+.markdown h3[id="returned-by"] + p a:hover code,
+.markdown h3[id="member-of"] + p a:hover code {
+  background: var(--ifm-navbar-link-hover-color) !important;
+  color: white !important;
+  border-color: var(--ifm-color-primary) !important;
+}
+
+/* Badge styling for relationship sections */
+.markdown h3[id="interfaces"] + p .badge,
+.markdown h3[id="interfaces"] + h4 .badge,
+.markdown h3[id="implemented-by"] + p .badge,
+.markdown h3[id="returned-by"] + p .badge,
+.markdown h3[id="member-of"] + p .badge {
+  font-size: 10px !important;
+  padding: 3px 8px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.025em !important;
+  border: 1px solid #d1d5db;
+  background: #f3f4f6 !important;
+  color: #6b7280 !important;
+}
+
+/* ==========================================
+   RESPONSIVE BEHAVIOR
+   ========================================== */
+
 @media (max-width: 900px) {
   .markdown h4[id*="--"] .param-info, .markdown h4[id$="-"] .param-info,
   .markdown h5[id*="--"] .param-info, .markdown h5[id$="-"] .param-info {
@@ -602,5 +724,16 @@ pre {
   
   .markdown h5[id*="--"], .markdown h5[id$="-"] {
     margin-left: 12px;
+  }
+  
+  /* Relationship sections responsive adjustments */
+  .markdown h3[id="interfaces"] + p,
+  .markdown h3[id="interfaces"] + h4,
+  .markdown h3[id="implemented-by"] + p,
+  .markdown h3[id="returned-by"] + p,
+  .markdown h3[id="member-of"] + p {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 }
