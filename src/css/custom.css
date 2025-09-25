@@ -439,6 +439,11 @@ pre {
 }
 
 /* Typography - Type links */
+.markdown h4[id*="--"] .param-info a, .markdown h4[id$="-"] .param-info a,
+.markdown h5[id*="--"] .param-info a, .markdown h5[id$="-"] .param-info a {
+  text-decoration: none;
+}
+
 .markdown h4[id*="--"] .param-info a code, .markdown h4[id$="-"] .param-info a code,
 .markdown h5[id*="--"] .param-info a code, .markdown h5[id$="-"] .param-info a code {
   font-family: 'Monaco', 'Consolas', 'SF Mono', monospace !important;
@@ -533,6 +538,7 @@ pre {
 .markdown h4[id*="--"] + p + p a:hover, .markdown h4[id$="-"] + p + p a:hover,
 .markdown h5[id*="--"] + p + p a:hover, .markdown h5[id$="-"] + p + p a:hover {
   border-bottom-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
 }
 
 /* Responsive behavior */
