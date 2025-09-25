@@ -8,9 +8,14 @@ export default (function() {
     if (isProcessing) return;
     isProcessing = true;
 
+    // Exclude h4s that are children of relationship sections
     const fieldHeaders = document.querySelectorAll('h4[id*="--"]:not(.enhanced), h4[id$="-"]:not(.enhanced), h5[id*="--"]:not(.enhanced), h5[id$="-"]:not(.enhanced)');
     
     fieldHeaders.forEach(header => {
+      // Skip if this h4 is part of a relationship section
+      const isRelationshipH4 = header.previousElementSibling?.matches('h3[id="interfaces"], h3[id="member-of"], h3[id="implemented-by"], h3[id="returned-by"]');
+      if (isRelationshipH4) return;
+      
       header.classList.add('enhanced');
       
       if (header.querySelector('.param-info')) return;

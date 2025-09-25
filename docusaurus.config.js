@@ -17,7 +17,7 @@ module.exports = {
   projectName: "api-reference", // Usually your repo name.
   clientModules: [
     require.resolve('./src/theme/ApiRefEnhancer/index.js'),
-    require.resolve('./src/theme/ApiRefEnhancer/memberOf.js'),
+    require.resolve('./src/theme/ApiRefEnhancer/cardBadgeNesting.js'),
   ],
   themeConfig: {
     algolia: {

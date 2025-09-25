@@ -586,100 +586,85 @@ pre {
 }
 
 /* ==========================================
-   RELATIONSHIP SECTIONS - UNIQUE BORDER COLORS
+   RELATIONSHIP SECTIONS - UNIFIED VERTICAL LAYOUT
    ========================================== */
 
-/* Shared base styling for all relationship sections */
+/* Base styling for all relationship sections */
 .markdown h3[id="interfaces"] + p,
 .markdown h3[id="interfaces"] + h4,
 .markdown h3[id="implemented-by"] + p,
 .markdown h3[id="returned-by"] + p,
 .markdown h3[id="member-of"] + p {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
+  flex-direction: column; /* Changed: All sections now use vertical layout */
+  gap: 8px; /* Unified gap for all sections */
+  align-items: flex-start; /* Changed: Consistent alignment */
   padding: 16px 20px;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
   margin: 16px 0;
   line-height: 1.4;
+  font-size: 14px; /* Unified font size */
+  font-weight: normal; /* Unified font weight */
 }
 
-/* Interfaces - Blue */
+/* Unique border colors for each section type */
 .markdown h3[id="interfaces"] + p,
 .markdown h3[id="interfaces"] + h4 {
   border-left: 3px solid var(--relationship-interfaces);
 }
 
-.markdown h3[id="interfaces"] + h4 {
-  font-size: 14px;
-  font-weight: normal;
-  margin: 16px 0 8px 0;
-}
-
-/* Implemented By - Green */
 .markdown h3[id="implemented-by"] + p {
   border-left: 3px solid var(--relationship-implemented-by);
 }
 
-/* Returned By - Orange */
 .markdown h3[id="returned-by"] + p {
   border-left: 3px solid var(--relationship-returned-by);
 }
 
-/* Member Of - Red */
 .markdown h3[id="member-of"] + p {
   border-left: 3px solid var(--relationship-member-of);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
 }
 
-/* Hide bullet separators in relationship sections */
+/* Hide bullet separators in all relationship sections */
 .markdown h3[id="interfaces"] + p span[style*="font-size: 0.5em"],
+.markdown h3[id="interfaces"] + h4 span[style*="font-size: 0.5em"],
 .markdown h3[id="implemented-by"] + p span[style*="font-size: 0.5em"],
 .markdown h3[id="returned-by"] + p span[style*="font-size: 0.5em"],
 .markdown h3[id="member-of"] + p span[style*="font-size: 0.5em"] {
   display: none;
 }
 
-/* Consistent link and code styling across relationship sections */
+/* Unified link styling for all relationship sections */
 .markdown h3[id="interfaces"] + p a,
 .markdown h3[id="interfaces"] + h4 a,
 .markdown h3[id="implemented-by"] + p a,
 .markdown h3[id="returned-by"] + p a,
 .markdown h3[id="member-of"] + p a {
-  display: inline-flex;
+  display: flex; /* Changed: All links now use flex layout */
   align-items: center;
+  width: 100%; /* Changed: Full width for all links */
+  padding: 8px 12px; /* Changed: Consistent padding for all */
+  background: white; /* Changed: White background for all */
+  border: 1px solid #e2e8f0; /* Changed: Border for all */
+  border-radius: 4px; /* Changed: Rounded corners for all */
   text-decoration: none;
   transition: all 0.2s ease;
-  margin-right: 4px;
+  margin-right: 0; /* Changed: No margin for consistency */
 }
 
-/* Special styling for Member Of vertical list */
-.markdown h3[id="member-of"] + p a {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 8px 12px;
-  background: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 4px;
-  margin-right: 0;
-}
-
+/* Unified hover states for all relationship section links */
+.markdown h3[id="interfaces"] + p a:hover,
+.markdown h3[id="interfaces"] + h4 a:hover,
+.markdown h3[id="implemented-by"] + p a:hover,
+.markdown h3[id="returned-by"] + p a:hover,
 .markdown h3[id="member-of"] + p a:hover {
   border-color: var(--ifm-color-primary-light);
   box-shadow: 0 2px 4px rgba(98, 64, 181, 0.08);
 }
 
-.markdown h3[id="member-of"] + p .badge {
-  margin-left: auto;
-}
-
+/* Unified code styling within relationship section links */
 .markdown h3[id="interfaces"] + p a code,
 .markdown h3[id="interfaces"] + h4 a code,
 .markdown h3[id="implemented-by"] + p a code,
@@ -696,6 +681,7 @@ pre {
   transition: all 0.2s ease;
 }
 
+/* Unified code hover effects */
 .markdown h3[id="interfaces"] + p a:hover code,
 .markdown h3[id="interfaces"] + h4 a:hover code,
 .markdown h3[id="implemented-by"] + p a:hover code,
@@ -706,7 +692,7 @@ pre {
   border-color: var(--ifm-color-primary) !important;
 }
 
-/* Badge styling for relationship sections */
+/* Unified badge styling for all relationship sections */
 .markdown h3[id="interfaces"] + p .badge,
 .markdown h3[id="interfaces"] + h4 .badge,
 .markdown h3[id="implemented-by"] + p .badge,
@@ -721,6 +707,7 @@ pre {
   border: 1px solid #d1d5db;
   background: #f3f4f6 !important;
   color: #6b7280 !important;
+  margin-left: auto; /* Push badges to the right */
 }
 
 /* ==========================================
@@ -759,13 +746,14 @@ pre {
   .markdown h3[id="implemented-by"] + p,
   .markdown h3[id="returned-by"] + p,
   .markdown h3[id="member-of"] + p {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    padding: 12px 16px; /* Slightly reduced padding on mobile */
   }
   
-  /* Member Of maintains vertical list on mobile */
-  .markdown h3[id="member-of"] + p {
-    gap: 8px;
+  .markdown h3[id="interfaces"] + p a,
+  .markdown h3[id="interfaces"] + h4 a,
+  .markdown h3[id="implemented-by"] + p a,
+  .markdown h3[id="returned-by"] + p a,
+  .markdown h3[id="member-of"] + p a {
+    padding: 6px 10px; /* Reduced padding on mobile */
   }
 }
