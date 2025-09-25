@@ -28,10 +28,6 @@
     "Segoe UI Symbol";
 }
 
-html[data-theme="dark"] {
-  --ifm-color-primary: #c0b3e1;
-}
-
 body {
   background-color: #fafafa;
   background-image: url("/img/gradient.png");
@@ -142,10 +138,6 @@ body {
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
-}
-
-html[data-theme="dark"] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
 }
 
 pre {
@@ -317,19 +309,6 @@ pre {
   font-weight: 600;
 }
 
-html[data-theme="dark"] .tabs-container {
-  background: #1e293b;
-  border-bottom-color: #475569;
-}
-
-html[data-theme="dark"] .tabs {
-  background: #334155;
-}
-
-html[data-theme="dark"] .tabs__item--active {
-  background: #1e293b;
-}
-
 .navbar__link.swan-api-explorer,
 .swan-unified-nav {
   padding: 0.5rem 1rem;
@@ -396,53 +375,72 @@ html[data-theme="dark"] .tabs__item--active {
 .markdown h5[id*="--"], .markdown h5[id$="-"] {
   background: #f8fafc;
   border: 1px solid #e2e8f0;
+  border-left: 3px solid var(--ifm-color-primary-lightest);
   border-radius: 6px;
   padding: 16px 20px;
   margin: 8px 0;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
   font-size: 14px;
   font-weight: normal;
   transition: all 0.2s ease;
 }
 
-/* H5 overrides */
+/* H5 specific styles */
 .markdown h5[id*="--"], .markdown h5[id$="-"] {
   margin-left: 24px;
   background: #f9fafb;
-  border-left: 3px solid var(--ifm-color-primary-light);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* Hover states */
-.markdown h4[id*="--"]:hover, .markdown h4[id$="-"]:hover { background: #f1f5f9; border-color: #cbd5e1; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
-.markdown h5[id*="--"]:hover, .markdown h5[id$="-"]:hover { background: #f3f4f6; }
+.markdown h4[id*="--"]:hover, .markdown h4[id$="-"]:hover { 
+  background: #f1f5f9; 
+  border-color: #cbd5e1; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+}
+.markdown h5[id*="--"]:hover, .markdown h5[id$="-"]:hover { 
+  background: #f3f4f6; 
+}
 
-/* Field name */
-.markdown h4[id*="--"] > code:first-of-type, .markdown h4[id$="-"] > code:first-of-type,
-.markdown h5[id*="--"] > code:first-of-type, .markdown h5[id$="-"] > code:first-of-type {
+/* Container styles */
+.markdown h4[id*="--"] .param-info, .markdown h4[id$="-"] .param-info,
+.markdown h5[id*="--"] .param-info, .markdown h5[id$="-"] .param-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 auto;
+  min-width: 200px;
+  flex-wrap: wrap;
+}
+
+.markdown h4[id*="--"] .badge-container, .markdown h4[id$="-"] .badge-container,
+.markdown h5[id*="--"] .badge-container, .markdown h5[id$="-"] .badge-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  flex: 0 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* Typography - Field names */
+.markdown h4[id*="--"] .param-info > code:first-child, .markdown h4[id$="-"] .param-info > code:first-child,
+.markdown h5[id*="--"] .param-info > code:first-child, .markdown h5[id$="-"] .param-info > code:first-child {
   font-family: 'Monaco', 'Consolas', 'SF Mono', monospace !important;
   background: transparent !important;
   padding: 0 !important;
   border: none !important;
   color: var(--ifm-color-primary) !important;
   font-weight: 600 !important;
-  flex: 1 1 auto;
-  min-width: 200px;
 }
 
-/* Type links */
-.markdown h4[id*="--"] a, .markdown h4[id$="-"] a,
-.markdown h5[id*="--"] a, .markdown h5[id$="-"] a {
-  flex: 0 1 auto;
-  white-space: nowrap;
-  min-width: min-content;
-}
-
-.markdown h4[id*="--"] a code, .markdown h4[id$="-"] a code,
-.markdown h5[id*="--"] a code, .markdown h5[id$="-"] a code {
+/* Typography - Type links */
+.markdown h4[id*="--"] .param-info a code, .markdown h4[id$="-"] .param-info a code,
+.markdown h5[id*="--"] .param-info a code, .markdown h5[id$="-"] .param-info a code {
   font-family: 'Monaco', 'Consolas', 'SF Mono', monospace !important;
   background: #e2e8f0 !important;
   color: #475569 !important;
@@ -454,21 +452,13 @@ html[data-theme="dark"] .tabs__item--active {
   transition: all 0.2s ease;
 }
 
-.markdown h4[id*="--"] a:hover code, .markdown h4[id$="-"] a:hover code,
-.markdown h5[id*="--"] a:hover code, .markdown h5[id$="-"] a:hover code {
+.markdown h4[id*="--"] .param-info a:hover code, .markdown h4[id$="-"] .param-info a:hover code,
+.markdown h5[id*="--"] .param-info a:hover code, .markdown h5[id$="-"] .param-info a:hover code {
   background: var(--ifm-color-primary-light) !important;
   color: white !important;
 }
 
-/* Hide elements */
-.markdown h4[id*="--"] span[style*="font-size: 0.5em"], .markdown h4[id$="-"] span[style*="font-size: 0.5em"],
-.markdown h5[id*="--"] span[style*="font-size: 0.5em"], .markdown h5[id$="-"] span[style*="font-size: 0.5em"],
-.markdown h4[id*="--"] .hash-link, .markdown h4[id$="-"] .hash-link,
-.markdown h5[id*="--"] .hash-link, .markdown h5[id$="-"] .hash-link {
-  display: none;
-}
-
-/* Badge styling - Default grey for all badges */
+/* Badge styling */
 .markdown h4[id*="--"] .badge, .markdown h4[id$="-"] .badge,
 .markdown h5[id*="--"] .badge, .markdown h5[id$="-"] .badge {
   font-size: 10px !important;
@@ -477,16 +467,12 @@ html[data-theme="dark"] .tabs__item--active {
   font-weight: 600 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.025em !important;
-  border: 1px solid transparent;
+  border: 1px solid #d1d5db;
   flex-shrink: 0;
-  margin-left: auto;
-  order: 999;
   background: #f3f4f6 !important;
   color: #6b7280 !important;
-  border-color: #d1d5db !important;
 }
 
-/* Non-null badges - Red styling applied via JavaScript */
 .markdown h4[id*="--"] .badge.non-null, .markdown h4[id$="-"] .badge.non-null,
 .markdown h5[id*="--"] .badge.non-null, .markdown h5[id$="-"] .badge.non-null {
   background: #fee2e2 !important;
@@ -494,13 +480,20 @@ html[data-theme="dark"] .tabs__item--active {
   border-color: #fecaca !important;
 }
 
-/* Badge spacing */
 .markdown h4[id*="--"] .badge + .badge, .markdown h4[id$="-"] .badge + .badge,
 .markdown h5[id*="--"] .badge + .badge, .markdown h5[id$="-"] .badge + .badge {
   margin-left: 4px;
 }
 
-/* Descriptions */
+/* Hide unwanted elements */
+.markdown h4[id*="--"] span[style*="font-size: 0.5em"], .markdown h4[id$="-"] span[style*="font-size: 0.5em"],
+.markdown h5[id*="--"] span[style*="font-size: 0.5em"], .markdown h5[id$="-"] span[style*="font-size: 0.5em"],
+.markdown h4[id*="--"] .hash-link, .markdown h4[id$="-"] .hash-link,
+.markdown h5[id*="--"] .hash-link, .markdown h5[id$="-"] .hash-link {
+  display: none;
+}
+
+/* Description paragraphs */
 .markdown h4[id*="--"] + p, .markdown h4[id$="-"] + p,
 .markdown h5[id*="--"] + p, .markdown h5[id$="-"] + p,
 .markdown h4[id*="--"] + p + p, .markdown h4[id$="-"] + p + p,
@@ -511,7 +504,6 @@ html[data-theme="dark"] .tabs__item--active {
   color: #64748b;
   font-size: 14px;
   line-height: 1.6;
-  border-left: 2px solid #f1f5f9;
 }
 
 .markdown h4[id*="--"] + p + p, .markdown h4[id$="-"] + p + p,
@@ -523,7 +515,7 @@ html[data-theme="dark"] .tabs__item--active {
 .markdown h5[id*="--"] + p + p, .markdown h5[id$="-"] + p + p {
   margin-left: 24px;
   padding-left: 16px;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* Description links */
@@ -543,66 +535,38 @@ html[data-theme="dark"] .tabs__item--active {
   border-bottom-color: var(--ifm-color-primary);
 }
 
-/* Mobile */
+/* Responsive behavior */
+@media (max-width: 900px) {
+  .markdown h4[id*="--"] .param-info, .markdown h4[id$="-"] .param-info,
+  .markdown h5[id*="--"] .param-info, .markdown h5[id$="-"] .param-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .markdown h4[id*="--"] .badge-container, .markdown h4[id$="-"] .badge-container,
+  .markdown h5[id*="--"] .badge-container, .markdown h5[id$="-"] .badge-container {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
 @media (max-width: 768px) {
   .markdown h4[id*="--"], .markdown h4[id$="-"],
   .markdown h5[id*="--"], .markdown h5[id$="-"] {
     flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .markdown h4[id*="--"] .badge-container, .markdown h4[id$="-"] .badge-container,
+  .markdown h5[id*="--"] .badge-container, .markdown h5[id$="-"] .badge-container {
     align-items: flex-start;
-    gap: 8px;
-    padding: 12px 16px;
-  }
-  
-  .markdown h4[id*="--"] > code:first-of-type, .markdown h4[id$="-"] > code:first-of-type,
-  .markdown h5[id*="--"] > code:first-of-type, .markdown h5[id$="-"] > code:first-of-type {
-    min-width: unset;
-  }
-  
-  .markdown h4[id*="--"] a, .markdown h4[id$="-"] a,
-  .markdown h5[id*="--"] a, .markdown h5[id$="-"] a {
-    justify-content: flex-end;
   }
   
   .markdown h5[id*="--"], .markdown h5[id$="-"] {
     margin-left: 12px;
   }
-}
-
-/* Dark mode */
-html[data-theme="dark"] .markdown h4[id*="--"], html[data-theme="dark"] .markdown h4[id$="-"] { background: #1e293b; border-color: #334155; }
-html[data-theme="dark"] .markdown h5[id*="--"], html[data-theme="dark"] .markdown h5[id$="-"] { background: #0f172a; border-color: #1e293b; }
-html[data-theme="dark"] .markdown h4[id*="--"]:hover, html[data-theme="dark"] .markdown h4[id$="-"]:hover { background: #334155; border-color: #475569; }
-html[data-theme="dark"] .markdown h5[id*="--"]:hover, html[data-theme="dark"] .markdown h5[id$="-"]:hover { background: #1e293b; }
-
-html[data-theme="dark"] .markdown h4[id*="--"] a code, html[data-theme="dark"] .markdown h4[id$="-"] a code,
-html[data-theme="dark"] .markdown h5[id*="--"] a code, html[data-theme="dark"] .markdown h5[id$="-"] a code {
-  background: #374151 !important;
-  color: #d1d5db !important;
-}
-
-html[data-theme="dark"] .markdown h4[id*="--"] + p, html[data-theme="dark"] .markdown h4[id$="-"] + p,
-html[data-theme="dark"] .markdown h5[id*="--"] + p, html[data-theme="dark"] .markdown h5[id$="-"] + p,
-html[data-theme="dark"] .markdown h4[id*="--"] + p + p, html[data-theme="dark"] .markdown h4[id$="-"] + p + p,
-html[data-theme="dark"] .markdown h5[id*="--"] + p + p, html[data-theme="dark"] .markdown h5[id$="-"] + p + p {
-  color: #94a3b8;
-  border-left-color: #334155;
-}
-
-/* Dark mode badge styling */
-html[data-theme="dark"] .markdown h4[id*="--"] .badge, 
-html[data-theme="dark"] .markdown h4[id$="-"] .badge,
-html[data-theme="dark"] .markdown h5[id*="--"] .badge, 
-html[data-theme="dark"] .markdown h5[id$="-"] .badge {
-  background: #374151 !important;
-  color: #d1d5db !important;
-  border-color: #4b5563 !important;
-}
-
-html[data-theme="dark"] .markdown h4[id*="--"] .badge.non-null, 
-html[data-theme="dark"] .markdown h4[id$="-"] .badge.non-null,
-html[data-theme="dark"] .markdown h5[id*="--"] .badge.non-null, 
-html[data-theme="dark"] .markdown h5[id$="-"] .badge.non-null {
-  background: #991b1b !important;
-  color: #fee2e2 !important;
-  border-color: #b91c1c !important;
 }
