@@ -427,28 +427,33 @@ pre {
   justify-content: flex-end;
 }
 
-/* Typography - Field names */
-.markdown h4[id*="--"] .param-info > code:first-child, .markdown h4[id$="-"] .param-info > code:first-child,
-.markdown h5[id*="--"] .param-info > code:first-child, .markdown h5[id$="-"] .param-info > code:first-child {
+/* Typography - Parameter names (first anchor's code element) - Override with higher specificity */
+.markdown h4[id*="--"] .param-info > a:first-child code, .markdown h4[id$="-"] .param-info > a:first-child code,
+.markdown h5[id*="--"] .param-info > a:first-child code, .markdown h5[id$="-"] .param-info > a:first-child code {
   font-family: 'Monaco', 'Consolas', 'SF Mono', monospace !important;
-  background: transparent !important;
-  padding: 0 !important;
-  border: none !important;
-  color: var(--ifm-color-primary) !important;
+  background: #e8e7eb !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  border: 1px solid #abaaad !important;
+  color: #5c5a5f !important;
   font-weight: 600 !important;
 }
 
-/* Typography - Type links */
+
+
+/* Typography - Links */
 .markdown h4[id*="--"] .param-info a, .markdown h4[id$="-"] .param-info a,
 .markdown h5[id*="--"] .param-info a, .markdown h5[id$="-"] .param-info a {
   text-decoration: none;
 }
 
+/* General styling for all code elements in param-info */
 .markdown h4[id*="--"] .param-info a code, .markdown h4[id$="-"] .param-info a code,
 .markdown h5[id*="--"] .param-info a code, .markdown h5[id$="-"] .param-info a code {
   font-family: 'Monaco', 'Consolas', 'SF Mono', monospace !important;
-  background: #e2e8f0 !important;
-  color: #475569 !important;
+  background: #c7c7c8 !important;
+  color: #374151 !important;
+  border: 1px solid #abaaad !important;
   padding: 4px 8px !important;
   border-radius: 4px !important;
   font-size: inherit !important;
@@ -459,8 +464,9 @@ pre {
 
 .markdown h4[id*="--"] .param-info a:hover code, .markdown h4[id$="-"] .param-info a:hover code,
 .markdown h5[id*="--"] .param-info a:hover code, .markdown h5[id$="-"] .param-info a:hover code {
-  background: var(--ifm-color-primary-light) !important;
+  background: var(--ifm-navbar-link-hover-color) !important;
   color: white !important;
+  border-color: var(--ifm-color-primary) !important;
 }
 
 /* Badge styling */
