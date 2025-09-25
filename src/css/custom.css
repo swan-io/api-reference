@@ -406,23 +406,25 @@ pre {
 }
 
 /* Container styles */
+/* Keep your existing param-info styling but add line-height */
 .markdown h4[id*="--"] .param-info, .markdown h4[id$="-"] .param-info,
 .markdown h5[id*="--"] .param-info, .markdown h5[id$="-"] .param-info {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Important: change from center */
   gap: 8px;
   flex: 1 1 auto;
   min-width: 200px;
   flex-wrap: wrap;
 }
 
+/* Update the badge container to match the param-info alignment */
 .markdown h4[id*="--"] .badge-container, .markdown h4[id$="-"] .badge-container,
 .markdown h5[id*="--"] .badge-container, .markdown h5[id$="-"] .badge-container {
   display: flex;
   flex-direction: row;
   gap: 4px;
   flex: 0 0 auto;
-  align-items: center;
+  align-items: flex-start; /* Changed from center to flex-start */
   flex-wrap: wrap;
   justify-content: flex-end;
 }
@@ -445,6 +447,7 @@ pre {
 .markdown h4[id*="--"] .param-info a, .markdown h4[id$="-"] .param-info a,
 .markdown h5[id*="--"] .param-info a, .markdown h5[id$="-"] .param-info a {
   text-decoration: none;
+  margin: 1px 0; /* This creates vertical spacing when items wrap */
 }
 
 /* General styling for all code elements in param-info */
@@ -482,6 +485,7 @@ pre {
   flex-shrink: 0;
   background: #f3f4f6 !important;
   color: #6b7280 !important;
+  margin: 1px 0;
 }
 
 .markdown h4[id*="--"] .badge.non-null, .markdown h4[id$="-"] .badge.non-null,
