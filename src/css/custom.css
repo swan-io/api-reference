@@ -370,10 +370,10 @@ pre {
 }
 
 /* ==========================================
-   GRAPHQL FIELD STYLING - PRE-STYLED FOR PERFORMANCE
+   GRAPHQL FIELD STYLING
+   Default styles to prevent FOUC
    ========================================== */
 
-/* PRE-STYLING: Apply visual container styles immediately to prevent FOUC */
 .markdown h4[id*="--"], .markdown h4[id$="-"],
 .markdown h5[id*="--"], .markdown h5[id$="-"] {
   background: #f8fafc;
@@ -388,14 +388,12 @@ pre {
   line-height: 1.5;
 }
 
-/* H5 specific pre-styling */
 .markdown h5[id*="--"], .markdown h5[id$="-"] {
   margin-left: 32px;
   border-left: 3px solid var(--ifm-color-primary-lightest);
   background: #f9fafb;
 }
 
-/* PRE-STYLE: Basic code elements to look similar before JS processes them */
 .markdown h4[id*="--"] code, .markdown h4[id$="-"] code,
 .markdown h5[id*="--"] code, .markdown h5[id$="-"] code {
   font-family: 'Monaco', 'Consolas', 'SF Mono', monospace;
@@ -408,7 +406,6 @@ pre {
   margin: 1px 2px;
 }
 
-/* PRE-STYLE: Parameter names (first code element) */
 .markdown h4[id*="--"] code:first-of-type, .markdown h4[id$="-"] code:first-of-type,
 .markdown h5[id*="--"] code:first-of-type, .markdown h5[id$="-"] code:first-of-type {
   background: #e8e7eb;
@@ -416,7 +413,6 @@ pre {
   font-weight: 600;
 }
 
-/* ENHANCED STYLING: Applied after JavaScript processing */
 .markdown h4[id*="--"].enhanced, .markdown h4[id$="-"].enhanced,
 .markdown h5[id*="--"].enhanced, .markdown h5[id$="-"].enhanced {
   display: flex;
@@ -425,7 +421,6 @@ pre {
   gap: 16px;
 }
 
-/* Enhanced hover states */
 .markdown h4[id*="--"].enhanced:hover, .markdown h4[id$="-"].enhanced:hover { 
   background: #f1f5f9; 
   border-color: #cbd5e1; 
@@ -435,7 +430,6 @@ pre {
   background: #f3f4f6; 
 }
 
-/* Container styles for enhanced fields */
 .markdown h4[id*="--"] .param-info, .markdown h4[id$="-"] .param-info,
 .markdown h5[id*="--"] .param-info, .markdown h5[id$="-"] .param-info {
   display: flex;
@@ -457,7 +451,6 @@ pre {
   justify-content: flex-end;
 }
 
-/* Enhanced typography - Parameter names (first anchor's code element) */
 .markdown h4[id*="--"] .param-info > a:first-child code, .markdown h4[id$="-"] .param-info > a:first-child code,
 .markdown h5[id*="--"] .param-info > a:first-child code, .markdown h5[id$="-"] .param-info > a:first-child code {
   font-family: 'Monaco', 'Consolas', 'SF Mono', monospace !important;
@@ -469,14 +462,12 @@ pre {
   font-weight: 600 !important;
 }
 
-/* Enhanced typography - Links */
 .markdown h4[id*="--"] .param-info a, .markdown h4[id$="-"] .param-info a,
 .markdown h5[id*="--"] .param-info a, .markdown h5[id$="-"] .param-info a {
   text-decoration: none;
   margin: 1px 0;
 }
 
-/* Enhanced styling for all code elements in param-info */
 .markdown h4[id*="--"] .param-info a code, .markdown h4[id$="-"] .param-info a code,
 .markdown h5[id*="--"] .param-info a code, .markdown h5[id$="-"] .param-info a code {
   font-family: 'Monaco', 'Consolas', 'SF Mono', monospace !important;
@@ -491,7 +482,6 @@ pre {
   transition: all 0.2s ease;
 }
 
-/* Enhanced hover effects */
 .markdown h4[id*="--"] .param-info a:hover code, .markdown h4[id$="-"] .param-info a:hover code,
 .markdown h5[id*="--"] .param-info a:hover code, .markdown h5[id$="-"] .param-info a:hover code {
   background: var(--ifm-navbar-link-hover-color) !important;
@@ -499,7 +489,6 @@ pre {
   border-color: var(--ifm-color-primary) !important;
 }
 
-/* Badge styling */
 .markdown h4[id*="--"] .badge, .markdown h4[id$="-"] .badge,
 .markdown h5[id*="--"] .badge, .markdown h5[id$="-"] .badge {
   font-size: 10px !important;
@@ -535,7 +524,6 @@ pre {
   margin-left: 4px;
 }
 
-/* Hide unwanted elements */
 .markdown h4[id*="--"] span[style*="font-size: 0.5em"], .markdown h4[id$="-"] span[style*="font-size: 0.5em"],
 .markdown h5[id*="--"] span[style*="font-size: 0.5em"], .markdown h5[id$="-"] span[style*="font-size: 0.5em"],
 .markdown h4[id*="--"] .hash-link, .markdown h4[id$="-"] .hash-link,
@@ -543,7 +531,6 @@ pre {
   display: none;
 }
 
-/* Admonition boxes following fields - proper indentation */
 .markdown h4[id*="--"] + .theme-admonition, .markdown h4[id$="-"] + .theme-admonition {
   margin-left: 32px;
   margin-top: 8px;
@@ -554,7 +541,6 @@ pre {
   margin-top: 8px;
 }
 
-/* Description paragraphs and lists - consolidated with admonition support */
 .markdown h4[id*="--"] + p, .markdown h4[id$="-"] + p,
 .markdown h5[id*="--"] + p, .markdown h5[id$="-"] + p,
 .markdown h4[id*="--"] + p + p, .markdown h4[id$="-"] + p + p,
@@ -571,7 +557,6 @@ pre {
   line-height: 1.6;
 }
 
-/* Description lists with proper indentation */
 .markdown h4[id*="--"] + p + ul, .markdown h4[id$="-"] + p + ul,
 .markdown h5[id*="--"] + p + ul, .markdown h5[id$="-"] + p + ul,
 .markdown h4[id*="--"] + p + p + ul, .markdown h4[id$="-"] + p + p + ul,
@@ -585,7 +570,6 @@ pre {
   line-height: 1.6;
 }
 
-/* Second paragraphs and admonition paragraphs - remove top margin */
 .markdown h4[id*="--"] + p + p, .markdown h4[id$="-"] + p + p,
 .markdown h5[id*="--"] + p + p, .markdown h5[id$="-"] + p + p,
 .markdown h4[id*="--"] + p + ul, .markdown h4[id$="-"] + p + ul,
@@ -597,7 +581,6 @@ pre {
   margin-top: 0;
 }
 
-/* H5 specific adjustments for all description types */
 .markdown h5[id*="--"] + p, .markdown h5[id$="-"] + p,
 .markdown h5[id*="--"] + p + p, .markdown h5[id$="-"] + p + p,
 .markdown h5[id*="--"] + .theme-admonition + p, .markdown h5[id$="-"] + .theme-admonition + p,
@@ -607,7 +590,6 @@ pre {
   font-size: 14px;
 }
 
-/* H5 lists with additional left margin */
 .markdown h5[id*="--"] + p + ul, .markdown h5[id$="-"] + p + ul,
 .markdown h5[id*="--"] + p + p + ul, .markdown h5[id$="-"] + p + p + ul {
   margin-left: 64px;
@@ -615,7 +597,6 @@ pre {
   font-size: 14px;
 }
 
-/* Description links - consolidated for all description types */
 .markdown h4[id*="--"] + p a, .markdown h4[id$="-"] + p a,
 .markdown h5[id*="--"] + p a, .markdown h5[id$="-"] + p a,
 .markdown h4[id*="--"] + p + p a, .markdown h4[id$="-"] + p + p a,
@@ -642,30 +623,28 @@ pre {
 }
 
 /* ==========================================
-   RELATIONSHIP SECTIONS - UNIFIED VERTICAL LAYOUT
+   RELATIONSHIP SECTIONS - VERTICAL CARD LAYOUT
    ========================================== */
 
-/* Base styling for all relationship sections */
 .markdown h3[id="interfaces"] + p,
 .markdown h3[id="interfaces"] + h4,
 .markdown h3[id="implemented-by"] + p,
 .markdown h3[id="returned-by"] + p,
 .markdown h3[id="member-of"] + p {
   display: flex;
-  flex-direction: column; /* Changed: All sections now use vertical layout */
-  gap: 8px; /* Unified gap for all sections */
-  align-items: flex-start; /* Changed: Consistent alignment */
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
   padding: 16px 20px;
   background: #f8fafc;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
   margin: 16px 0;
   line-height: 1.4;
-  font-size: 14px; /* Unified font size */
-  font-weight: normal; /* Unified font weight */
+  font-size: 14px;
+  font-weight: normal;
 }
 
-/* Unique border colors for each section type */
 .markdown h3[id="interfaces"] + p,
 .markdown h3[id="interfaces"] + h4 {
   border-left: 3px solid var(--relationship-interfaces);
@@ -683,7 +662,6 @@ pre {
   border-left: 3px solid var(--relationship-member-of);
 }
 
-/* Hide bullet separators in all relationship sections */
 .markdown h3[id="interfaces"] + p span[style*="font-size: 0.5em"],
 .markdown h3[id="interfaces"] + h4 span[style*="font-size: 0.5em"],
 .markdown h3[id="implemented-by"] + p span[style*="font-size: 0.5em"],
@@ -692,25 +670,23 @@ pre {
   display: none;
 }
 
-/* Unified link styling for all relationship sections */
 .markdown h3[id="interfaces"] + p a,
 .markdown h3[id="interfaces"] + h4 a,
 .markdown h3[id="implemented-by"] + p a,
 .markdown h3[id="returned-by"] + p a,
 .markdown h3[id="member-of"] + p a {
-  display: flex; /* Changed: All links now use flex layout */
+  display: flex;
   align-items: center;
-  width: 100%; /* Changed: Full width for all links */
-  padding: 8px 12px; /* Changed: Consistent padding for all */
-  background: white; /* Changed: White background for all */
-  border: 1px solid #e2e8f0; /* Changed: Border for all */
-  border-radius: 4px; /* Changed: Rounded corners for all */
+  width: 100%;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
   text-decoration: none;
   transition: all 0.2s ease;
-  margin-right: 0; /* Changed: No margin for consistency */
+  margin-right: 0;
 }
 
-/* Unified hover states for all relationship section links */
 .markdown h3[id="interfaces"] + p a:hover,
 .markdown h3[id="interfaces"] + h4 a:hover,
 .markdown h3[id="implemented-by"] + p a:hover,
@@ -720,7 +696,6 @@ pre {
   box-shadow: 0 2px 4px rgba(98, 64, 181, 0.08);
 }
 
-/* Unified code styling within relationship section links */
 .markdown h3[id="interfaces"] + p a code,
 .markdown h3[id="interfaces"] + h4 a code,
 .markdown h3[id="implemented-by"] + p a code,
@@ -737,7 +712,6 @@ pre {
   transition: all 0.2s ease;
 }
 
-/* Unified code hover effects */
 .markdown h3[id="interfaces"] + p a:hover code,
 .markdown h3[id="interfaces"] + h4 a:hover code,
 .markdown h3[id="implemented-by"] + p a:hover code,
@@ -748,7 +722,6 @@ pre {
   border-color: var(--ifm-color-primary) !important;
 }
 
-/* Unified badge styling for all relationship sections */
 .markdown h3[id="interfaces"] + p .badge,
 .markdown h3[id="interfaces"] + h4 .badge,
 .markdown h3[id="implemented-by"] + p .badge,
@@ -763,12 +736,12 @@ pre {
   border: 1px solid #d1d5db;
   background: #f3f4f6 !important;
   color: #6b7280 !important;
-  margin-left: auto; /* Push badges to the right */
+  margin-left: auto;
 }
 
-/* ==========================================
+/* ===================
    RESPONSIVE BEHAVIOR
-   ========================================== */
+   =================== */
 
 @media (max-width: 900px) {
   .markdown h4[id*="--"] .param-info, .markdown h4[id$="-"] .param-info,
@@ -796,13 +769,12 @@ pre {
     margin-left: 12px;
   }
   
-  /* Relationship sections responsive adjustments */
   .markdown h3[id="interfaces"] + p,
   .markdown h3[id="interfaces"] + h4,
   .markdown h3[id="implemented-by"] + p,
   .markdown h3[id="returned-by"] + p,
   .markdown h3[id="member-of"] + p {
-    padding: 12px 16px; /* Slightly reduced padding on mobile */
+    padding: 12px 16px;
   }
   
   .markdown h3[id="interfaces"] + p a,
@@ -810,10 +782,9 @@ pre {
   .markdown h3[id="implemented-by"] + p a,
   .markdown h3[id="returned-by"] + p a,
   .markdown h3[id="member-of"] + p a {
-    padding: 6px 10px; /* Reduced padding on mobile */
+    padding: 6px 10px;
   }
   
-  /* Adjust admonition indentation for mobile */
   .markdown h4[id*="--"] + .theme-admonition, .markdown h4[id$="-"] + .theme-admonition {
     margin-left: 12px;
   }
