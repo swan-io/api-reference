@@ -581,15 +581,18 @@ pre {
 .markdown h4[id*="--"] + .theme-admonition + p + p, .markdown h4[id$="-"] + .theme-admonition + p + p,
 .markdown h5[id*="--"] + .theme-admonition + p + p, .markdown h5[id$="-"] + .theme-admonition + p + p {
   border-radius: 0 0 6px 6px;
-  padding-top: 12px;
+  border-top: none;
+  padding-top: 0;
   margin-bottom: 8px;
 }
 
-/* First paragraph when followed by another paragraph - remove bottom radius */
+/* First paragraph when followed by another paragraph - remove bottom borders/radius */
 .markdown h4[id*="--"] + p:has(+ p), .markdown h4[id$="-"] + p:has(+ p),
 .markdown h5[id*="--"] + p:has(+ p), .markdown h5[id$="-"] + p:has(+ p) {
   border-radius: 0;
+  border-bottom: none;
   margin-bottom: 0;
+  padding-bottom: 12px;
 }
 
 .markdown h5[id*="--"] + p, .markdown h5[id$="-"] + p,
