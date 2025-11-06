@@ -432,7 +432,6 @@ pre {
 
 .markdown h4[id*="--"].enhanced:hover, .markdown h4[id$="-"].enhanced:hover { 
   background: #f1f5f9; 
-  border-color: #cbd5e1; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
 }
 .markdown h5[id*="--"].enhanced:hover, .markdown h5[id$="-"].enhanced:hover { 
