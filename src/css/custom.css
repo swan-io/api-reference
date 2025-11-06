@@ -395,6 +395,14 @@ pre {
   background: #f9fafb;
 }
 
+/* h4/h5 without following paragraph - restore full card appearance */
+.markdown h4[id*="--"]:not(:has(+ p)), .markdown h4[id$="-"]:not(:has(+ p)),
+.markdown h5[id*="--"]:not(:has(+ p)), .markdown h5[id$="-"]:not(:has(+ p)) {
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
 .markdown h4[id*="--"] code, .markdown h4[id$="-"] code,
 .markdown h5[id*="--"] code, .markdown h5[id$="-"] code {
   font-family: 'Monaco', 'Consolas', 'SF Mono', monospace;
