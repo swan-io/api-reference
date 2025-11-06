@@ -591,6 +591,8 @@ pre {
   padding-left: 16px;
   padding-right: 16px;
   font-size: 14px;
+  border-left: 3px solid var(--ifm-color-primary-lightest);
+  background: #f9fafb;
 }
 
 .markdown h5[id*="--"] + p + ul, .markdown h5[id$="-"] + p + ul,
