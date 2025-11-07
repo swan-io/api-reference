@@ -56,7 +56,6 @@ export default (function() {
     enhanceApiFields();
   }
 
-  // Use requestAnimationFrame for smoother updates
   new MutationObserver(() => {
     if (!isProcessing) {
       requestAnimationFrame(enhanceApiFields);

@@ -1,6 +1,3 @@
-// src/theme/RelationshipOrganizer/index.js
-
-// Generic debounce utility
 function debounce(fn, delay) {
   let timeoutId;
   return function(...args) {
@@ -34,7 +31,6 @@ function organizeAllRelationshipSections() {
   });
 }
 
-// Create debounced version
 const debouncedOrganize = debounce(organizeAllRelationshipSections, 50);
 
 // Initialize
