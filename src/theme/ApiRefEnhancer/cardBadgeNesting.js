@@ -1,3 +1,14 @@
+// src/theme/RelationshipOrganizer/index.js
+
+// Generic debounce utility
+function debounce(fn, delay) {
+  let timeoutId;
+  return function(...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
 function organizeAllRelationshipSections() {
   // Target all relationship sections that need badge organization
   const sections = [
@@ -23,12 +34,8 @@ function organizeAllRelationshipSections() {
   });
 }
 
-// Single initialization with debounced mutation observer
-let timeoutId;
-const debouncedOrganize = () => {
-  clearTimeout(timeoutId);
-  timeoutId = setTimeout(organizeAllRelationshipSections, 50);
-};
+// Create debounced version
+const debouncedOrganize = debounce(organizeAllRelationshipSections, 50);
 
 // Initialize
 if (document.readyState === 'loading') {

@@ -56,10 +56,10 @@ export default (function() {
     enhanceApiFields();
   }
 
-  // Simplified mutation observer
+  // Use requestAnimationFrame for smoother updates
   new MutationObserver(() => {
     if (!isProcessing) {
-      setTimeout(enhanceApiFields, 16);
+      requestAnimationFrame(enhanceApiFields);
     }
   }).observe(document.body, { childList: true, subtree: true });
 })();
