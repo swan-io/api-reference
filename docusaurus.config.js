@@ -15,6 +15,10 @@ module.exports = {
   favicon: "img/favicon.png",
   organizationName: "swan-io", // Usually your GitHub org/user name.
   projectName: "api-reference", // Usually your repo name.
+  clientModules: [
+    require.resolve('./src/theme/ApiRefEnhancer/index.js'),
+    require.resolve('./src/theme/ApiRefEnhancer/cardBadgeNesting.js'),
+  ],
   themeConfig: {
     algolia: {
       appId: "PWGO6EETLK",
