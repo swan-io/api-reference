@@ -1,5 +1,6 @@
 // src/theme/ApiRefEnhancer/index.js
 export default (function() {
+  // Exit early if not in browser - before any DOM access
   if (typeof window === 'undefined') return;
 
   let isProcessing = false;
