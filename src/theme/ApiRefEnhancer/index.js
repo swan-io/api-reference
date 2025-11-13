@@ -1,8 +1,5 @@
 // src/theme/ApiRefEnhancer/index.js
-export default (function() {
-  // Exit early if not in browser - before any DOM access
-  if (typeof window === 'undefined') return;
-
+if (typeof window !== 'undefined') {
   let isProcessing = false;
 
   function enhanceApiFields() {
@@ -62,4 +59,8 @@ export default (function() {
       requestAnimationFrame(enhanceApiFields);
     }
   }).observe(document.body, { childList: true, subtree: true });
-})();
+}
+
+export default function() {
+  // Empty function for module compatibility
+}
