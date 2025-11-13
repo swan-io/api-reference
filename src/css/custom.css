@@ -431,7 +431,6 @@ pre {
 }
 
 .markdown h4[id*="--"].enhanced:hover, .markdown h4[id$="-"].enhanced:hover { 
-  background: #f1f5f9; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
 }
 .markdown h5[id*="--"].enhanced:hover, .markdown h5[id$="-"].enhanced:hover { 
@@ -836,5 +835,4 @@ pre {
   .markdown h3[id="member-of"] + p {
     padding: 12px 16px;
   }
-  
 }
