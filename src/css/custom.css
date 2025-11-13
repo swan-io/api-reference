@@ -395,9 +395,9 @@ pre {
   background: #f9fafb;
 }
 
-/* h4/h5 without following paragraph - restore full card appearance */
-.markdown h4[id*="--"]:not(:has(+ p)), .markdown h4[id$="-"]:not(:has(+ p)),
-.markdown h5[id*="--"]:not(:has(+ p)), .markdown h5[id$="-"]:not(:has(+ p)) {
+/* h4/h5 without following paragraph or admonition - restore full card appearance */
+.markdown h4[id*="--"]:not(:has(+ p)):not(:has(+ .theme-admonition)), .markdown h4[id$="-"]:not(:has(+ p)):not(:has(+ .theme-admonition)),
+.markdown h5[id*="--"]:not(:has(+ p)):not(:has(+ .theme-admonition)), .markdown h5[id$="-"]:not(:has(+ p)):not(:has(+ .theme-admonition)) {
   border-bottom: 1px solid #e2e8f0;
   border-radius: 6px;
   margin-bottom: 8px;
@@ -540,13 +540,23 @@ pre {
 }
 
 .markdown h4[id*="--"] + .theme-admonition, .markdown h4[id$="-"] + .theme-admonition {
-  margin-left: 32px;
-  margin-top: 8px;
+  margin: 0;
+  border-radius: 0;
+  border-top: 1px solid #f9c292;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #f9c292;
+  border-left: 3px solid #c0b3e1;
+  background: #fff9e6;
 }
 
 .markdown h5[id*="--"] + .theme-admonition, .markdown h5[id$="-"] + .theme-admonition {
-  margin-left: 64px;
-  margin-top: 8px;
+  margin: 0;
+  border-radius: 0;
+  border-top: 1px solid #f9c292;
+  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #f9c292;
+  border-left: 3px solid #c0b3e1;
+  background: #fff9e6;
 }
 
 .markdown h4[id*="--"] + p, .markdown h4[id$="-"] + p,
