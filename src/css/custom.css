@@ -580,17 +580,31 @@ pre {
   border-radius: 0 0 6px 6px;
 }
 
+/* Remove bottom rounded corners from paragraphs when followed by ul */
+.markdown h4[id*="--"] + p:has(+ ul), .markdown h4[id$="-"] + p:has(+ ul),
+.markdown h5[id*="--"] + p:has(+ ul), .markdown h5[id$="-"] + p:has(+ ul),
+.markdown h4[id*="--"] + p + p:has(+ ul), .markdown h4[id$="-"] + p + p:has(+ ul),
+.markdown h5[id*="--"] + p + p:has(+ ul), .markdown h5[id$="-"] + p + p:has(+ ul) {
+  border-radius: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
 .markdown h4[id*="--"] + p + ul, .markdown h4[id$="-"] + p + ul,
 .markdown h5[id*="--"] + p + ul, .markdown h5[id$="-"] + p + ul,
 .markdown h4[id*="--"] + p + p + ul, .markdown h4[id$="-"] + p + p + ul,
 .markdown h5[id*="--"] + p + p + ul, .markdown h5[id$="-"] + p + p + ul {
-  margin-top: 8px;
-  margin-bottom: 16px;
-  margin-left: 32px;
-  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  padding: 0 20px 16px 40px;
   color: #64748b;
   font-size: 14px;
   line-height: 1.6;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid #c0b3e1;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
 }
 
 .markdown h4[id*="--"] + p + p, .markdown h4[id$="-"] + p + p,
