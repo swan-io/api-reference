@@ -674,6 +674,27 @@ pre {
   border-left: 3px solid var(--relationship-interfaces);
 }
 
+/* Remove bottom margin and borders for Interfaces h4 when followed by description */
+.markdown h3[id="interfaces"] + h4:has(+ p) {
+  margin-bottom: 0;
+  border-radius: 6px 6px 0 0;
+  border-bottom: none;
+}
+
+/* Description paragraph after Interfaces h4 */
+.markdown h3[id="interfaces"] + h4 + p {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-left: 3px solid var(--relationship-interfaces);
+  border-radius: 0 0 6px 6px;
+  padding: 12px 16px;
+  margin: 0 0 20px 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
 .markdown h3[id="implemented-by"] + p {
   border-left: 3px solid var(--relationship-implemented-by);
 }
