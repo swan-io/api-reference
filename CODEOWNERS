@@ -1,1 +1,2 @@
-CODEOWNERS @swan-io/security
+* @swan-io/docs
+CODEOWNERS @swan-io/security @swan-io/engineering-productivity
