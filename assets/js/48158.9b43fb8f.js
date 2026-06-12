@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_swan_io_docs=self.webpackChunk_swan_io_docs||[]).push([[48158],{48158:(s,a,c)=>{c.r(a),c.d(a,{DocSearchModal:()=>e.a1});var e=c(55600)}}]);

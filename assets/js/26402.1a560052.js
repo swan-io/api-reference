@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunk_swan_io_docs=globalThis.webpackChunk_swan_io_docs||[]).push([[26402],{26402(s,c,e){e.d(c,{createArchitectureServices:()=>a.S});var a=e(45016);e(69302)}}]);
