@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="Swan Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.adc5c513.css">
-<script src="/assets/js/runtime~main.4cebe47c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.29e98699.js" defer="defer"></script>
 <script src="/assets/js/main.5f0d7e16.js" defer="defer"></script>
 </head>
 <body>
@@ -33,8 +33,8 @@
 <p>First name of the individual</p>
 <ul>
 <li class="">Between 1 and 100 characters</li>
-<li class="">Allowed characters: Unicode letters, hyphens, apostrophes, spaces</li>
-<li class="">Valid format (regex): <code>^[\p{L}]+(?:[-&#x27;\s][\p{L}]+)*&#x27;?$</code></li>
+<li class="">Allowed characters: Unicode letters, hyphens, apostrophes (straight or either typographic quote), whitespace</li>
+<li class="">Valid format (regex): <code>/^[\p{L}]+(?:[-&#x27;‘’\s]{1,2}[\p{L}]+)*[&#x27;‘’]?$/u</code> (the <code>u</code> flag is required for <code>\p{L}</code> to match a Unicode letter)</li>
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="relatedindividualinputpreferredfirstnamestring-"><a href="#" class=""><code style="font-weight:normal">RelatedIndividualInput.<b>preferredFirstName</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a class="" href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#relatedindividualinputpreferredfirstnamestring-" class="hash-link" aria-label="Direct link to relatedindividualinputpreferredfirstnamestring-" title="Direct link to relatedindividualinputpreferredfirstnamestring-" translate="no">​</a></h4>
 <p>Preferred first name of the individual</p>
@@ -45,8 +45,8 @@
 <p>Last name of the individual</p>
 <ul>
 <li class="">Between 1 and 100 characters</li>
-<li class="">Allowed characters: Unicode letters, hyphens, apostrophes, spaces</li>
-<li class="">Valid format (regex): <code>^[\p{L}]+(?:[-&#x27;\s][\p{L}]+)*&#x27;?$</code></li>
+<li class="">Allowed characters: Unicode letters, hyphens, apostrophes (straight or either typographic quote), whitespace</li>
+<li class="">Valid format (regex): <code>/^[\p{L}]+(?:[-&#x27;‘’\s]{1,2}[\p{L}]+)*[&#x27;‘’]?$/u</code> (the <code>u</code> flag is required for <code>\p{L}</code> to match a Unicode letter)</li>
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="relatedindividualinputsexsex-"><a href="#" class=""><code style="font-weight:normal">RelatedIndividualInput.<b>sex</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a class="" href="/enums/sex"><code>Sex</code></a> <span class="badge badge--secondary">enum</span><a href="#relatedindividualinputsexsex-" class="hash-link" aria-label="Direct link to relatedindividualinputsexsex-" title="Direct link to relatedindividualinputsexsex-" translate="no">​</a></h4>
 <p>Sex of the individual</p>

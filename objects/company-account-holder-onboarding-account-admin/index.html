@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="Swan Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.adc5c513.css">
-<script src="/assets/js/runtime~main.4cebe47c.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.29e98699.js" defer="defer"></script>
 <script src="/assets/js/main.5f0d7e16.js" defer="defer"></script>
 </head>
 <body>
@@ -41,8 +41,8 @@
 <p>First name of the account administrator</p>
 <ul>
 <li class="">Between 1 and 100 characters</li>
-<li class="">Allowed characters: Unicode letters, hyphens, apostrophes, spaces</li>
-<li class="">Valid format (regex): <code>^[\p{L}]+(?:[-&#x27;\s][\p{L}]+)*&#x27;?$</code></li>
+<li class="">Allowed characters: Unicode letters, hyphens, apostrophes (straight or either typographic quote), whitespace</li>
+<li class="">Valid format (regex): <code>/^[\p{L}]+(?:[-&#x27;‘’\s]{1,2}[\p{L}]+)*[&#x27;‘’]?$/u</code> (the <code>u</code> flag is required for <code>\p{L}</code> to match a Unicode letter)</li>
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="companyaccountholderonboardingaccountadminpreferredlanguageaccountlanguage-"><a href="#" class=""><code style="font-weight:normal">CompanyAccountHolderOnboardingAccountAdmin.<b>preferredLanguage</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a class="" href="/enums/account-language"><code>AccountLanguage</code></a> <span class="badge badge--secondary">enum</span><a href="#companyaccountholderonboardingaccountadminpreferredlanguageaccountlanguage-" class="hash-link" aria-label="Direct link to companyaccountholderonboardingaccountadminpreferredlanguageaccountlanguage-" title="Direct link to companyaccountholderonboardingaccountadminpreferredlanguageaccountlanguage-" translate="no">​</a></h4>
 <p>Preferred language of the account admin. Will be used to localize the onboarding process and interface</p>
@@ -50,8 +50,8 @@
 <p>Last name of the account administrator</p>
 <ul>
 <li class="">Between 1 and 100 characters</li>
-<li class="">Allowed characters: Unicode letters, hyphens, apostrophes, spaces</li>
-<li class="">Valid format (regex): <code>^[\p{L}]+(?:[-&#x27;\s][\p{L}]+)*&#x27;?$</code></li>
+<li class="">Allowed characters: Unicode letters, hyphens, apostrophes (straight or either typographic quote), whitespace</li>
+<li class="">Valid format (regex): <code>/^[\p{L}]+(?:[-&#x27;‘’\s]{1,2}[\p{L}]+)*[&#x27;‘’]?$/u</code> (the <code>u</code> flag is required for <code>\p{L}</code> to match a Unicode letter)</li>
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="companyaccountholderonboardingaccountadminnationalitycca3-"><a href="#" class=""><code style="font-weight:normal">CompanyAccountHolderOnboardingAccountAdmin.<b>nationality</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a class="" href="/scalars/cca3"><code>CCA3</code></a> <span class="badge badge--secondary">scalar</span><a href="#companyaccountholderonboardingaccountadminnationalitycca3-" class="hash-link" aria-label="Direct link to companyaccountholderonboardingaccountadminnationalitycca3-" title="Direct link to companyaccountholderonboardingaccountadminnationalitycca3-" translate="no">​</a></h4>
 <p>Nationality of the account administrator</p>
