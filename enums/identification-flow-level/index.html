@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="Swan Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.adc5c513.css">
-<script src="/assets/js/runtime~main.ebdeedfc.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.833fdc17.js" defer="defer"></script>
 <script src="/assets/js/main.54e2aa93.js" defer="defer"></script>
 </head>
 <body>
@@ -28,7 +28,7 @@
 it contains the identification level that is requested to be fulfilled
 after the oauth2 consent by starting the right identification.</p>
 <p>QES =&gt; use the <code>startFourthlineQesIdentification</code> mutation</p>
-<p>Expert =&gt; use the <code>startUbbleExpertIdVerificationIdentification</code> mutation</p>
+<p>Expert =&gt; use the <code>startCheckoutExpertIdentification</code> mutation</p>
 <p>PVID =&gt; use the <code>startCheckoutPvidIdentification</code> mutation</p>
 <p>Auto =&gt; use query <code>recommendedIdentificationFlow</code> to let Swan recommend the best flow and level for a user</p>
 <div class="language-graphql codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#bfc7d5;--prism-background-color:#292d3e"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-graphql codeBlock_bY9V thin-scrollbar" style="color:#bfc7d5;background-color:#292d3e"><code class="codeBlockLines_e6Vv"><div class="token-line" style="color:#bfc7d5"><span class="token keyword" style="font-style:italic">enum</span><span class="token plain"> </span><span class="token class-name" style="color:rgb(255, 203, 107)">IdentificationFlowLevel</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(199, 146, 234)">{</span><span class="token plain"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token property">Auto</span><span class="token plain"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token property">Expert</span><span class="token plain"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token constant" style="color:rgb(130, 170, 255)">PVID</span><span class="token plain"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token constant" style="color:rgb(130, 170, 255)">QES</span><span class="token plain"></span><br></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token punctuation" style="color:rgb(199, 146, 234)">}</span><br></div></code></pre></div></div>
