@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="Swan Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.adc5c513.css">
-<script src="/assets/js/runtime~main.f3a923f3.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.80eb1d61.js" defer="defer"></script>
 <script src="/assets/js/main.5437db78.js" defer="defer"></script>
 </head>
 <body>
@@ -33,20 +33,31 @@
 <p>First name of the individual</p>
 <ul>
 <li class="">Between 1 and 100 characters</li>
-<li class="">Allowed characters: Unicode letters, hyphens (ASCII, U+2010 hyphen, U+2011 non-breaking hyphen, U+2013 en dash; a single one may have a space on each side), apostrophes (straight or either typographic quote), whitespace</li>
-<li class="">Valid format (regex): <code>/^[\p{L}]+(?:(?:[-‐‑–&#x27;‘’\s]{1,2}|\s[-‐‑–]\s)[\p{L}]+)*[&#x27;  ‘’]?$/u</code> (the <code>u</code> flag is required for <code>\p{L}</code> to match a Unicode letter)</li>
+<li class="">Letters from any script, with their accents and marks</li>
+<li class="">Between words: spaces, hyphens and dashes, apostrophes, dots and the word separators of other scripts (for example <code>・</code>, <code>·</code>, <code>׳</code>); at most two in a row</li>
+<li class="">Must contain at least one letter; must not start or end with a hyphen or dash</li>
+<li class="">Rejected: digits, emoji, symbols (modifier symbols such as <code>´</code> or <code>¨</code> are accepted), characters used in code or markup (<code>&lt; &gt; &amp; &quot; ? ( ) [ ] { } ; : / \ @ = % + ! # * _ ^</code>) including their full-width forms, other invisible characters, tabs and line breaks</li>
+<li class="">Before the check: zero-width spaces, direction marks and byte order marks are removed, as are invisible joiners and variation selectors next to Latin, Greek or Cyrillic letters and joiners that are not between two letters; commas and repeated spaces become one space; surrounding spaces are removed; accented letters are stored in one standard form. The cleaned name is what is stored.</li>
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="relatedindividualinputpreferredfirstnamestring-"><a href="#" class=""><code style="font-weight:normal">RelatedIndividualInput.<b>preferredFirstName</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a class="" href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#relatedindividualinputpreferredfirstnamestring-" class="hash-link" aria-label="Direct link to relatedindividualinputpreferredfirstnamestring-" title="Direct link to relatedindividualinputpreferredfirstnamestring-" translate="no">​</a></h4>
 <p>Preferred first name of the individual</p>
 <ul>
-<li class="">Maximum 100 characters</li>
+<li class="">Between 1 and 100 characters</li>
+<li class="">Letters from any script, with their accents and marks</li>
+<li class="">Between words: spaces, hyphens and dashes, apostrophes, dots and the word separators of other scripts (for example <code>・</code>, <code>·</code>, <code>׳</code>); at most two in a row</li>
+<li class="">Must contain at least one letter; must not start or end with a hyphen or dash</li>
+<li class="">Rejected: digits, emoji, symbols (modifier symbols such as <code>´</code> or <code>¨</code> are accepted), characters used in code or markup (<code>&lt; &gt; &amp; &quot; ? ( ) [ ] { } ; : / \ @ = % + ! # * _ ^</code>) including their full-width forms, other invisible characters, tabs and line breaks</li>
+<li class="">Before the check: zero-width spaces, direction marks and byte order marks are removed, as are invisible joiners and variation selectors next to Latin, Greek or Cyrillic letters and joiners that are not between two letters; commas and repeated spaces become one space; surrounding spaces are removed; accented letters are stored in one standard form. The cleaned name is what is stored.</li>
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="relatedindividualinputlastnamestring-"><a href="#" class=""><code style="font-weight:normal">RelatedIndividualInput.<b>lastName</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a class="" href="/scalars/string"><code>String</code></a> <span class="badge badge--secondary">scalar</span><a href="#relatedindividualinputlastnamestring-" class="hash-link" aria-label="Direct link to relatedindividualinputlastnamestring-" title="Direct link to relatedindividualinputlastnamestring-" translate="no">​</a></h4>
 <p>Last name of the individual</p>
 <ul>
 <li class="">Between 1 and 100 characters</li>
-<li class="">Allowed characters: Unicode letters, hyphens (ASCII, U+2010 hyphen, U+2011 non-breaking hyphen, U+2013 en dash; a single one may have a space on each side), apostrophes (straight or either typographic quote), whitespace</li>
-<li class="">Valid format (regex): <code>/^[\p{L}]+(?:(?:[-‐‑–&#x27;‘’\s]{1,2}|\s[-‐‑–]\s)[\p{L}]+)*[&#x27;‘’]?$/u</code> (the <code>u</code> flag is required for <code>\p{L}</code> to match a Unicode letter)</li>
+<li class="">Letters from any script, with their accents and marks</li>
+<li class="">Between words: spaces, hyphens and dashes, apostrophes, dots and the word separators of other scripts (for example <code>・</code>, <code>·</code>, <code>׳</code>); at most two in a row</li>
+<li class="">Must contain at least one letter; must not start or end with a hyphen or dash</li>
+<li class="">Rejected: digits, emoji, symbols (modifier symbols such as <code>´</code> or <code>¨</code> are accepted), characters used in code or markup (<code>&lt; &gt; &amp; &quot; ? ( ) [ ] { } ; : / \ @ = % + ! # * _ ^</code>) including their full-width forms, other invisible characters, tabs and line breaks</li>
+<li class="">Before the check: zero-width spaces, direction marks and byte order marks are removed, as are invisible joiners and variation selectors next to Latin, Greek or Cyrillic letters and joiners that are not between two letters; commas and repeated spaces become one space; surrounding spaces are removed; accented letters are stored in one standard form. The cleaned name is what is stored.</li>
 </ul>
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="relatedindividualinputsexsex-"><a href="#" class=""><code style="font-weight:normal">RelatedIndividualInput.<b>sex</b></code></a><span style="font-weight:normal;font-size:.5em;color:var(--ifm-color-secondary-darkest)"> ● </span><a class="" href="/enums/sex"><code>Sex</code></a> <span class="badge badge--secondary">enum</span><a href="#relatedindividualinputsexsex-" class="hash-link" aria-label="Direct link to relatedindividualinputsexsex-" title="Direct link to relatedindividualinputsexsex-" translate="no">​</a></h4>
 <p>Sex of the individual</p>
