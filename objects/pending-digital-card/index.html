@@ -10,7 +10,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="Swan Docs" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.adc5c513.css">
-<script src="/assets/js/runtime~main.449f4f06.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.4d8c1ae1.js" defer="defer"></script>
 <script src="/assets/js/main.72f169aa.js" defer="defer"></script>
 </head>
 <body>
@@ -45,7 +45,9 @@
 <p>Signature Data is mandatory for Apple Pay</p>
 <p>Google Wallet data is for Google Pay with Unified Push Provisioning: call this field from the
 Google Wallet SDK&#x27;s <code>PaymentCredentialsGenerator.generate()</code> callback, with the <code>serverSessionId</code>
-it provides, to also get the Google Opaque Payment Card.</p>
+it provides, to also get the Google Opaque Payment Card. It becomes mandatory for Google Pay at
+the Unified Push Provisioning cut-over (end of December 2026): without it, a Google Pay digital
+card is then refused with <code>BAD_USER_INPUT</code>.</p>
 <p>This data is only available for a digital card in:</p>
 <ul>
 <li class="">status: Pending</li>
