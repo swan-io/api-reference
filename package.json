@@ -33,7 +33,7 @@
     "graphql": "^16.14.2",
     "graphql-config": "^5.1.6",
     "node-fetch": "^3.3.1",
-    "patch-package": "^8.0.0",
+    "patch-package": "^8.0.1",
     "postinstall-postinstall": "^2.1.0",
     "prettier": "^3.3.3",
     "prism-react-renderer": "^2.3.0",
@@ -51,5 +51,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "resolutions": {
+    "graphql-config/minimatch": "^11.0.4"
   }
 }
