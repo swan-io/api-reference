@@ -132,6 +132,13 @@ module.exports = {
         printTypeOptions: {
           useApiGroup: false,
         },
+        customDirective: {
+          // Input objects such as BeneficiaryInput only accept one of their fields
+          oneOf: {
+            descriptor: () =>
+              "Exactly one of the fields below must be provided, and it must not be `null`.",
+          },
+        },
         loaders: {
           GraphQLFileLoader: "@graphql-tools/graphql-file-loader",
         },

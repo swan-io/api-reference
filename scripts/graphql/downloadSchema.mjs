@@ -3,7 +3,12 @@ import fs from "node:fs";
 import path from "node:path";
 import fetch from "node-fetch";
 
-const introspectionQuery = getIntrospectionQuery();
+// The default introspection query leaves out deprecated arguments and input fields, and
+// doesn't say which input objects are `@oneOf`: ask for both so the reference shows them.
+const introspectionQuery = getIntrospectionQuery({
+  inputValueDeprecation: true,
+  oneOf: true,
+});
 
 fetch(`https://api.swan.io/live-partner/graphql`, {
   method: "POST",
