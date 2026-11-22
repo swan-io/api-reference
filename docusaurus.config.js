@@ -110,8 +110,12 @@ module.exports = {
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/swan-io/api-reference/edit/main/docs/",
+          // Only docs/index.mdx is in this repository: the other pages are generated from the
+          // GraphQL schema by `yarn api-reference`, so there is no file to edit on GitHub.
+          editUrl: ({ versionDocsDirPath, docPath }) =>
+            docPath === "index.mdx"
+              ? `https://github.com/swan-io/api-reference/edit/main/${versionDocsDirPath}/${docPath}`
+              : undefined,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -131,6 +135,13 @@ module.exports = {
         baseURL: "",
         printTypeOptions: {
           useApiGroup: false,
+        },
+        customDirective: {
+          // Input objects such as BeneficiaryInput only accept one of their fields
+          oneOf: {
+            descriptor: () =>
+              "Exactly one of the fields below must be provided, and it must not be `null`.",
+          },
         },
         loaders: {
           GraphQLFileLoader: "@graphql-tools/graphql-file-loader",

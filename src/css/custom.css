@@ -425,6 +425,7 @@ pre {
 .markdown h4[id*="--"].enhanced, .markdown h4[id$="-"].enhanced,
 .markdown h5[id*="--"].enhanced, .markdown h5[id$="-"].enhanced {
   display: flex;
+  flex-wrap: wrap; /* Badges go to the next line instead of covering a long field name */
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
@@ -487,6 +488,8 @@ pre {
   font-weight: 500 !important;
   text-decoration: none !important;
   transition: all 0.2s ease;
+  /* Names longer than the whole card (no break opportunity) would overflow it */
+  overflow-wrap: anywhere;
 }
 
 .markdown h4[id*="--"] .param-info a:hover code, .markdown h4[id$="-"] .param-info a:hover code,

@@ -17,7 +17,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "graphql-update-schemas": "mkdir -p scripts/graphql/dist && node scripts/graphql/downloadSchema.mjs",
-    "api-reference": "rm -fr docs/api && docusaurus graphql-to-doc",
+    "api-reference": "rm -fr docs/directives docs/enums docs/inputs docs/interfaces docs/mutations docs/objects docs/queries docs/scalars docs/unions && docusaurus graphql-to-doc && rm -f docs/generated.md",
     "full-build": "yarn graphql-update-schemas && yarn api-reference && yarn build"
   },
   "dependencies": {
